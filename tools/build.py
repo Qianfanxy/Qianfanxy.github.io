@@ -11,6 +11,7 @@ ASSETS_IN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "assets")
 REPO = "https://github.com/mali9527/codex-full-guide-for-beginners"
 COMMIT = "f0393647dd6d2414b27e6bff191b849745b6f5b3"
 TITLE = "Codex完全零基础入门"
+KEEP = 5  # 只收录前 5 个单元：开篇 + 第1–4章
 
 text = open(os.path.join(SRC, "book.md"), encoding="utf-8").read()
 lines = text.splitlines()
@@ -49,9 +50,12 @@ for ch in chapters:
         id2page[a[0] or a[1]] = ch["slug"]
 
 # ---- 2. 图片：压缩成 WebP ----
+chapters = chapters[:KEEP]
+kept = {ch["slug"] for ch in chapters}
+shutil.rmtree(BOOK, ignore_errors=True)
 imgdir = os.path.join(BOOK, "img"); os.makedirs(imgdir, exist_ok=True)
 imgmap = {}
-for p in re.findall(r'\]\((assets/illustrations/[^)]+)\)', text):
+for p in re.findall(r'\]\((assets/illustrations/[^)]+)\)', "\n".join(l for ch in chapters for l in ch["body"])):
     if p in imgmap: continue
     fig = re.search(r'(FIG-\d+)', p).group(1)
     im = Image.open(os.path.join(SRC, "imgs", p)).convert("RGB")
@@ -75,6 +79,8 @@ def render(md_text):
         href = m.group(1)
         if href.startswith("#"):
             pid = href[1:]
+            if pid in id2page and id2page[pid] not in kept:  # 未收录章节 → 原仓库
+                return f'href="{REPO}/blob/main/%E5%85%A8%E4%B9%A6.md{href}" target="_blank" rel="noopener"'
             if pid in id2page:
                 return f'href="{id2page[pid]}.html{"" if pid == id2page[pid] else href}"'
         elif not re.match(r'https?:|mailto:', href):
@@ -105,7 +111,7 @@ LICENSE_NOTE = f"""<footer class="credit">
 <p>原作：马力《<a href="{REPO}" target="_blank" rel="noopener">{TITLE}</a>》，采用
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
 <p>本网页版据原仓库 <a href="{REPO}/blob/{COMMIT}/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（{COMMIT[:7]}）</a>改编，
-改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本站只收录开篇至第4章，其余章节请到原仓库阅读。改动仅限排版与节选：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
 本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
 </footer>"""
 
@@ -117,7 +123,7 @@ def page(title, body, *, active=None, toc="", head_extra="", prev=None, nxt=None
     pager = ""
     if prev or nxt:
         pa = f'<a class="prev" href="{prev["slug"]}.html"><small>← 上一章</small><span>{html.escape(prev["title"])}</span></a>' if prev else "<span></span>"
-        na = f'<a class="next" href="{nxt["slug"]}.html"><small>下一章 →</small><span>{html.escape(nxt["title"])}</span></a>' if nxt else "<span></span>"
+        na = f'<a class="next" href="{nxt["slug"]}.html"><small>下一章 →</small><span>{html.escape(nxt["title"])}</span></a>' if nxt else f'<a class="next" href="{REPO}/blob/main/%E5%85%A8%E4%B9%A6.md#account-usage" target="_blank" rel="noopener"><small>后续章节 ↗</small><span>第5章起，到原仓库继续阅读</span></a>'
         pager = f'<nav class="pager">{pa}{na}</nav>'
     return f"""<!doctype html>
 <html lang="zh-CN">
@@ -203,6 +209,7 @@ cover_body = f"""<div class="cover">
   <h1 class="cover-title">{TITLE}</h1>
   <p class="author">马力 著</p>
   <p class="lead">写给没有编程经验的人：从安装应用、发出第一条消息，到权限、Plan、Goal、Skill、插件和定时任务，一步步学会用 Codex 把一件事真正做完。</p>
+  <p class="lead">本站收录开篇与第1–4章：从认识 Codex、安装应用，到完成第一件完整任务。后续章节请到<a href="{REPO}" target="_blank" rel="noopener">原仓库</a>阅读。</p>
   <div class="cta"><a class="btn primary" href="{chapters[0]['slug']}.html">开始阅读</a><a class="btn" id="resume" hidden href="#">继续阅读</a></div>
 </div>
 <h2 id="contents">目录</h2>
