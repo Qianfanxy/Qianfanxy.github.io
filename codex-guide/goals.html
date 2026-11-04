@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第17章 用Goal持续推进有明确终点的任务 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="goals">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html" class="active" aria-current="page"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="goals">第17章 用Goal持续推进有明确终点的任务</h1>
+<p>前面的大多数要求，一轮或几轮就能完成。有些工作要读一组材料、形成几个成果、交叉核对，再处理发现的问题。每完成一个小步骤都回来说一句「继续」，很费事。</p>
+<p><strong>Goal，持续目标</strong>，适合这种已经知道终点、需要接着推进的工作。它让Codex围绕同一目标继续选择下一步，直到完成、暂停或需要更多输入。目标写得清楚，才看得出它是在推进，还是在不断给自己加活。</p>
+<h2 id="goals-先看这次要完成什么">先看这次要完成什么</h2>
+<p>本章使用另一组<a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/main/examples/ch17-reference-index/README.md" target="_blank" rel="noopener">原创配套材料</a>：一个虚构的「资料目录」，里面有12条登记信息，以及整理规则、旧索引和补充决定。我们要整理的是这些记录，12份真实文件并不存在，也就谈不上移动或删除。</p>
+<p>这组材料里有几处需要核对：旧索引少了两条；一个叫「备份」的条目是否重复还未确认；一份路线草稿需要标明过时；有些日期或分类没有依据。最后要得到分类索引、待确认事项和接续说明，三份文件要彼此一致。</p>
+<p>这件事用普通任务也能完成。本章用Goal来做，是为了看清持续目标怎样定义、怎样中途调整、怎样知道该停。</p>
+<h2 id="goals-材料和工作位置先准备好">材料和工作位置先准备好</h2>
+<p>从配套页取得「资料目录-起始材料.zip」，解压得到「资料目录」文件夹，按第3章的方法在Codex中打开这个文件夹。Windows默认用Ctrl+O，Mac默认用⌘O；若绑定不同，到快捷键设置查Open folder。</p>
+<p>在该项目里用New chat开始一个Local任务，核对当前文件夹。先要求只读列出「材料」中的文件，并各用一句话说明用途。应能看到「文件目录.txt」「整理规则.txt」「旧索引.txt」「补充决定.txt」四份输入。</p>
+<p>接着确认模型和权限，沿用已经能完成普通文件任务的设置。使用Goal，用不着换到最高的Effort或Full access。材料能读取、输出位置清楚之后，再设置目标。</p>
+<h2 id="goals-把终点写进目标">把终点写进目标</h2>
+<p>在输入区键入<code>/</code>，选择 <strong><code>/goal</code></strong>，按入口填写目标。目标文字既是最初的要求，也是判断完成的依据，只写「帮我一直整理」就没有终点。可以使用本例的完整要求：</p>
+<blockquote class="prompt">
+<p>整理当前「资料目录」项目的四份输入。在「结果」中新建「分类索引.txt」「待确认事项.txt」和「接续说明.txt」，原材料不动。</p>
+<p>分类索引按「整理规则」与「补充决定」处理。01至12每个编号各出现一次，名称、已有日期和分类不擅自改动；没有依据的内容保留未定，可能重复的条目不合并。指出旧索引的遗漏或过时信息，所有待确认事项说明对应编号和来源。</p>
+<p>完成三份文件以后，交叉检查编号覆盖、事实、未确定事项和文件间一致性。能依据原文纠正的问题继续纠正；确需我决定的事说明依据再问。只整理记录，不寻找、移动、删除真实资料，也不联网补写。三份文件保存并完成上述核对，就是本次终点；报告实际位置、检查结果与剩余未知。</p>
+</blockquote>
+<p>这段目标让它自己安排小步骤，同时给出了明确的终点。未知的分类留在那里，整理照样算完成；没有依据却硬填一个分类，才是违反目标。<a href="https://learn.chatgpt.com/docs/long-running-work" target="_blank" rel="noopener">Goal的目标与完成标准</a></p>
+<h2 id="goals-进度行用来管理持续目标">进度行用来管理持续目标</h2>
+<!-- diagram: FIG-019 -->
+<figure><img src="img/FIG-019.webp" alt="区分暂停状态与恢复、编辑和清除三个控制，不把它们当成删除成果。" width="1448" height="1086" loading="lazy"><figcaption>区分暂停状态与恢复、编辑和清除三个控制，不把它们当成删除成果。</figcaption></figure>
+<p><em>图：暂停状态的Goal进度行局部。三处圈注分别指向编辑、恢复与清除目标；已经保存的文件要到文件夹中另行检查。</em></p>
+<!-- /diagram: FIG-019 -->
+
+<p>目标启动后，输入区上方会显示目标进度行。官方提供的控制包括<strong>暂停、恢复、编辑目标和清除目标</strong>，它们管的都是这个持续目标。<a href="https://learn.chatgpt.com/docs/reference/slash-commands" target="_blank" rel="noopener">Goal控制入口</a></p>
+<p>想补一条材料或限制，继续在同一任务发消息。想先看清现状再改目标，就在进度行暂停，等状态显示已暂停，检查已生成的文件，再编辑目标。核对修改后的目标文字，准备好以后恢复。</p>
+<p>例如，运行中你决定不再需要单独的接续说明，就写明去掉哪个交付项，并检查前面是否已经生成过该文件。已经生成的文件，编辑目标和暂停都不会去动它。</p>
+<p>目标不再需要继续时，使用进度行清除。清除的是持续推进的目标，任务历史和磁盘上的文件都保持原样。留下了什么，回到实际文件夹检查。</p>
+<h2 id="goals-停下来不一定是没完成好">停下来，不一定是没完成好</h2>
+<p>Goal仍遵守原来的权限与批准规则，需要你决定时会等待。新的文件、应用或账号访问，照样要经过请求和批准。</p>
+<p>本例遇到「10的分类未定」，按要求保留即可；你后来要求必须归入某一类，就需要自己决定归到哪里。遇到文件保存失败、材料无法读取或账号限制，先解决具体原因。缺少的条件不补上，让它「继续直到成功」也成功不了。</p>
+<p>想了解进展而暂不改变主任务，可以用学过的<code>/side</code>问当前状态。要改变目标或范围，回到主任务或目标控制里明确处理。</p>
+<h2 id="goals-完成后看三份实际文件">完成后看三份实际文件</h2>
+<p>Goal显示完成，检查才开始。打开「结果」中的三份文件，先看索引里01至12有没有各出现一次，再核对关键条件：05没有因为名字像备份而被合并，07保留了使用前重新核对的说明，10仍未定分类，01与09没有编出日期。</p>
+<p>待确认事项应与索引一致，接续说明应指出实际输出和仍未知的问题。旧索引缺少05与11，也应在差异说明中交代。配套材料提供了<a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/main/examples/ch17-reference-index/README.md" target="_blank" rel="noopener">演示结果</a>供比较内容。它是文件级示例，你得到的措辞和执行过程可以不同。</p>
+<p>报告说检查通过，文件却仍有遗漏，就指出具体编号，要求按原目标修正。反过来，目标已经完成时，它提出的优化建议可以留到以后，这次到此为止。</p>
+<h2 id="goals-离开电脑之前先看工作在哪里运行">离开电脑之前，先看工作在哪里运行</h2>
+<p>本地任务依赖这台电脑、应用和文件可用。预计要断网时，先暂停Goal，等条件恢复、核对文件以后再继续。Mac可按需要启用Settings里的Prevent sleep while running，它防的是电脑睡眠，网络和账号条件仍要另外留意。</p>
+<p>若账号提供 <strong>Codex Remote</strong>，可以在手机上查看、引导和批准连接电脑上的任务。可选设置路径是电脑端 <strong>Settings → Connections → Control this Mac or PC → Set up或Add</strong>，按提示完成验证；手机扫码，用同一ChatGPT账号和工作区批准连接，再在手机的Remote中选择那台电脑。</p>
+<p>工作仍由连接的Mac或Windows电脑执行，所以电脑要保持唤醒和联网。可用性受开放进度与组织设置影响。<a href="https://learn.chatgpt.com/docs/remote" target="_blank" rel="noopener">Remote官方设置</a></p>
+<p>不使用Remote，本章的目标整理照样能做。</p><nav class="pager"><a class="prev" href="feedback.html"><small>← 上一章</small><span>第16章 第一版不满意：怎样反馈、核对和改进</span></a><a class="next" href="delegation.html"><small>下一章 →</small><span>第18章 几件事怎样分开做：多个任务与子代理</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#goals-先看这次要完成什么">先看这次要完成什么</a></li><li><a href="#goals-材料和工作位置先准备好">材料和工作位置先准备好</a></li><li><a href="#goals-把终点写进目标">把终点写进目标</a></li><li><a href="#goals-进度行用来管理持续目标">进度行用来管理持续目标</a></li><li><a href="#goals-停下来不一定是没完成好">停下来，不一定是没完成好</a></li><li><a href="#goals-完成后看三份实际文件">完成后看三份实际文件</a></li><li><a href="#goals-离开电脑之前先看工作在哪里运行">离开电脑之前，先看工作在哪里运行</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

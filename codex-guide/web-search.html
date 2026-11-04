@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第11章 让Codex上网找资料，并检查来源 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="web-search">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html" class="active" aria-current="page"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="web-search">第11章 让Codex上网找资料，并检查来源</h1>
+<p>处理随书备忘时，原材料都在文件夹里。现在换一个问题：你想核对当前版本的安装要求，或者某个功能最近有没有变化。这些内容模型原有的知识里可能没有，需要实际去看网页。</p>
+<p>回答写得流畅，和这次确实上网查过，是两件事。联网查证要管好问题、来源和结论三样，最后得到一份能够回头检查的答案。</p>
+<h2 id="web-search-先把查什么说清楚">先把「查什么」说清楚</h2>
+<p>「帮我研究一下Codex」范围太大。可以从你现在遇到的具体问题出发：</p>
+<blockquote class="prompt">
+<p>请联网查当前官方说明：我使用Windows，已经安装桌面应用并用ChatGPT账号登录，第一次读取本地项目文件之前，还可能需要完成哪些设置？请优先打开官方原页，区分安装应用、登录和首次本地运行设置。写明核对日期、适用条件与原页链接；没查到的条件保持未知。这里只查资料，先不要在我的电脑上执行设置。</p>
+</blockquote>
+<p>这段话限定了系统、起点和问题，也说清这轮只查证，电脑上的设置先不动。Mac读者把平台换成Mac即可。一次只问一个平台，回答里的步骤才不会混在一起。</p>
+<p>问题本身随时间变化时，写上「截至今天」或一个明确日期。资料谈的是哪个产品、哪个入口、哪个版本，也要对得上。桌面应用、网页和终端工具共用一个名称，操作却各不相同。</p>
+<h2 id="web-search-看它是否真的搜索读取">看它是否真的搜索、读取</h2>
+<p>发送联网要求以后，留意任务中的工具活动和最后的来源链接。一次查证通常包含寻找相关页面、打开原页、提取与问题有关的内容，次序可以不同，我们核对的是这几个环节有没有做到。</p>
+<p>只看搜索结果的标题或摘要往往不够：摘要会省略前提，旧页面也可能排在前面。遇到决定操作顺序的关键条件，要求它打开原页确认。页面读不到时，让它照实说明读取失败。</p>
+<p>Codex的网页搜索可以使用托管的搜索能力。本地搜索设置可能使用缓存结果，所以需要当前信息时要明确提出，并检查来源的时间。<a href="https://learn.chatgpt.com/docs/web-search" target="_blank" rel="noopener">官方网页搜索说明</a></p>
+<h2 id="web-search-链接能打开还要看它支持什么">链接能打开，还要看它支持什么</h2>
+<p>结果返回后，先点开影响判断的那几个链接。对于安装问题，至少要看清平台要求、安装入口和首次运行条件所在的段落。</p>
+<p>可以用四个问题读一条依据：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>要检查的地方</th>
+<th>为什么要看</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>这是不是原始发布者的页面</td>
+<td>转述可能删掉条件，原页更容易核对</td>
+</tr>
+<tr>
+<td>页面说的是哪个入口和平台</td>
+<td>CLI的键位不能直接拿来教桌面应用</td>
+</tr>
+<tr>
+<td>这段话实际支持什么</td>
+<td>「逐步开放」不能写成「人人现在都有」</td>
+</tr>
+<tr>
+<td>日期和后续更新是否匹配</td>
+<td>页面较新不代表它解释的旧操作仍是主线</td>
+</tr>
+</tbody>
+</table></div>
+<p>尤其注意结论有没有比来源说得更多。原文只说支持某个平台，回答却补成「安装后不用任何设置」，后半句就需要另找证据。</p>
+<p>链接的数量说明不了什么。十个页面都引用同一则旧消息，依据仍然只有一个，而且是过时的。一个当前的、直接对应问题的官方段落，比许多无关链接有用。</p>
+<h2 id="web-search-把事实推断和未知分开">把事实、推断和未知分开</h2>
+<p>收到结果时，可以让它按具体问题说明三种情况：原文直接确认了什么，根据材料推断了什么，哪些条件仍未查到。格式不拘，三种信息的口气要有区别。</p>
+<!-- diagram: FIG-030 -->
+<figure><img src="img/FIG-030.webp" alt="区分原文确认、根据材料推断和仍未查到，不让推测变成事实。" width="1448" height="1086" loading="lazy"><figcaption>区分原文确认、根据材料推断和仍未查到，不让推测变成事实。</figcaption></figure>
+<p><em>图：区分原文确认、根据材料推断和仍未查到，不让推测变成事实。</em></p>
+<!-- /diagram: FIG-030 -->
+
+<p>例如，官方页面说明某功能正在逐步开放。这句话支持「有些账号暂时看不到」。至于你看不到按钮的原因，账号未开放只是可能之一，入口、版本或组织设置不同也会这样。要继续判断，就需要你的当前情况和更具体的证据。</p>
+<p>多个来源冲突时，先比较它们讨论的对象和时间。一个讲网页、一个讲桌面，多半并不冲突；两个都讲桌面，但一个早了几个月，就去查后续更新。仍然确定不了的，把分歧原样留下。两套步骤拼在一起，得到的是一份谁也没验证过的新教程。</p>
+<h2 id="web-search-网页内容只是本次材料">网页内容只是本次材料</h2>
+<p>网页中可能包含对读者的建议，也可能出现要求忽略原任务、运行命令或上传文件的文字。这些都是网页上的内容。Codex该做什么，由你在任务里的要求决定。</p>
+<p>单纯查证时，可以把范围写明：只阅读和整理来源，不下载执行程序，不发送自己的文件，不修改账号设置。查到一段命令，先请它解释这段命令会做什么，再看当前任务是否需要执行。</p>
+<p>搜索网页和操作你的浏览器是两项能力。普通网页读取遇到登录页面时，用不了你在另一个浏览器里的登录状态。怎样有选择地交出浏览器页面，第22章讲。</p>
+<p>同样，托管网页搜索和电脑上的命令联网是不同通道。它已经查到官网，稍后下载文件时仍可能出现另一个联网或权限请求。那次请求要重新看下载对象和操作目的。<a href="https://learn.chatgpt.com/docs/web-search" target="_blank" rel="noopener">搜索与本地权限的区别</a></p>
+<h2 id="web-search-让查证留下以后能用的结果">让查证留下以后能用的结果</h2>
+<p>需要留存的查证，可以要求保存一份简短记录：问题是什么，何时查的，结论适用于哪些条件，支持结论的原页，以及未解决的问题。只留「已查证」三个字，过一段时间就说不清当时检查了什么。</p>
+<p>例如在「我的待办」项目里，另开一个资料查证任务，把结果保存为「结果/桌面设置查证.txt」，本轮不改待办清单。写明保存位置后，按上一章的方法打开文件，检查链接是否仍能定位到对应说明。</p>
+<p>联网查证是为了补上当前任务缺少的依据。查到的材料足够支持眼前的判断，就回到原来的工作；仍有未知，就写明停在哪里。</p><nav class="pager"><a class="prev" href="results.html"><small>← 上一章</small><span>第10章 找到、检查、批注和保留成果</span></a><a class="next" href="projects-tasks.html"><small>下一章 →</small><span>第12章 管好任务与项目，过几天还能接着做</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#web-search-先把查什么说清楚">先把「查什么」说清楚</a></li><li><a href="#web-search-看它是否真的搜索读取">看它是否真的搜索、读取</a></li><li><a href="#web-search-链接能打开还要看它支持什么">链接能打开，还要看它支持什么</a></li><li><a href="#web-search-把事实推断和未知分开">把事实、推断和未知分开</a></li><li><a href="#web-search-网页内容只是本次材料">网页内容只是本次材料</a></li><li><a href="#web-search-让查证留下以后能用的结果">让查证留下以后能用的结果</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

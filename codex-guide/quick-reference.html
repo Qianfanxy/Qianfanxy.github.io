@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>附录：命令、设置、排障与术语 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="quick-reference">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html" class="active" aria-current="page"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="quick-reference">附录：命令、设置、排障与术语</h1>
+<p>这里供遇到问题时回查，表格用不着背。命令与快捷键均指桌面输入区和应用界面；可用项目受当前平台、账号、模型、组织与版本影响。找不到某项时，先回对应章节检查条件。终端教程里的同名命令属于另一个入口。</p>
+<h2 id="quick-reference-我想做这件事回哪一章">我想做这件事，回哪一章</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>眼前的问题</th>
+<th>主讲位置</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>从哪里安装、第一次本地操作要准备什么</td>
+<td><a href="desktop-setup.html">第2章</a></td>
+</tr>
+<tr>
+<td>怎样打开工作文件夹，确认选对位置</td>
+<td><a href="workspace-files.html">第3章</a></td>
+</tr>
+<tr>
+<td>怎样完成一次读取、生成、保存和修改</td>
+<td><a href="first-task.html">第4章</a></td>
+</tr>
+<tr>
+<td>几种会员差在哪里、剩余额度怎么看、达到限额怎么办</td>
+<td><a href="account-usage.html">第5章</a></td>
+</tr>
+<tr>
+<td>模型、Effort、Power和Fast怎么选</td>
+<td><a href="models-effort.html">第6章</a></td>
+</tr>
+<tr>
+<td>请求批准与自动批准分别做什么</td>
+<td><a href="permissions.html">第7章</a></td>
+</tr>
+<tr>
+<td>运行中怎样补充、排队、要求停止</td>
+<td><a href="running-control.html">第8章</a></td>
+</tr>
+<tr>
+<td>文件、图片、网页和应用快照怎么提供</td>
+<td><a href="materials.html">第9章</a></td>
+</tr>
+<tr>
+<td>怎样找成果、批注、另存和分享</td>
+<td><a href="results.html">第10章</a></td>
+</tr>
+<tr>
+<td>怎样上网查，并检查原始依据</td>
+<td><a href="web-search.html">第11章</a></td>
+</tr>
+<tr>
+<td>任务怎么找回、归档和继续</td>
+<td><a href="projects-tasks.html">第12章</a></td>
+</tr>
+<tr>
+<td>长对话怎么压缩或分开尝试</td>
+<td><a href="context.html">第13章</a></td>
+</tr>
+<tr>
+<td>需求不清、方案未定、第一版不满意</td>
+<td><a href="clear-requests.html">第14章</a>至<a href="feedback.html">第16章</a></td>
+</tr>
+<tr>
+<td>希望持续做到一个明确终点</td>
+<td><a href="goals.html">第17章</a></td>
+</tr>
+<tr>
+<td>希望把独立工作交给多个代理</td>
+<td><a href="delegation.html">第18章</a></td>
+</tr>
+<tr>
+<td>偏好、项目说明与记忆放哪里</td>
+<td><a href="personalization.html">第19章</a></td>
+</tr>
+<tr>
+<td>重复流程保存为技能、接入插件</td>
+<td><a href="skills.html">第20章</a>、<a href="plugins.html">第21章</a></td>
+</tr>
+<tr>
+<td>需要实际查看网页或操作其他应用</td>
+<td><a href="browser.html">第22章</a>、<a href="computer-use.html">第23章</a></td>
+</tr>
+<tr>
+<td>已跑通的工作希望按时再做</td>
+<td><a href="scheduled-work.html">第24章</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="quick-reference-输入区的常用命令">输入区的常用命令</h2>
+<p>先在输入区键入<code>/</code>，从实际出现的菜单中选择。下面按用途列出常用的一部分，完整列表以<a href="https://learn.chatgpt.com/docs/reference/slash-commands" target="_blank" rel="noopener">官方桌面斜线命令</a>为准。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>想做什么</th>
+<th>入口</th>
+<th>需要分清的地方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>查任务、上下文与限额</td>
+<td><code>/status</code></td>
+<td>显示的是状态；成果对不对要另外检查</td>
+</tr>
+<tr>
+<td>选型号、推理投入</td>
+<td><code>/model</code>、<code>/reasoning</code></td>
+<td>可用档随模型不同；也可用输入区模型控件</td>
+</tr>
+<tr>
+<td>切换速度档</td>
+<td><code>/fast</code></td>
+<td>用量增加；等网页、等你回答的时间不会缩短</td>
+</tr>
+<tr>
+<td>为新任务选项目</td>
+<td><code>/project</code></td>
+<td>只选项目，文件留在原处</td>
+</tr>
+<tr>
+<td>开始无项目任务</td>
+<td><code>/task</code></td>
+<td>成果保存在哪里要问清</td>
+</tr>
+<tr>
+<td>选择本地工作</td>
+<td><code>/local</code></td>
+<td>说的是文件位置，模型仍要联网</td>
+</tr>
+<tr>
+<td>先调查和讨论做法</td>
+<td><code>/plan</code></td>
+<td>切换规划模式；执行前核对已切出并明确要求</td>
+</tr>
+<tr>
+<td>持续推进明确目标</td>
+<td><code>/goal</code></td>
+<td>暂停、恢复、编辑、清除用目标进度行</td>
+</tr>
+<tr>
+<td>临时问一句解释</td>
+<td><code>/side</code></td>
+<td>主任务照常运行；要改方向，回主任务说</td>
+</tr>
+<tr>
+<td>精简当前上下文</td>
+<td><code>/compact</code></td>
+<td>保留的是摘要；压缩前先留接续说明</td>
+</tr>
+<tr>
+<td>尝试另一条讨论路线</td>
+<td><code>/fork</code></td>
+<td>分开的是任务，文件仍是同一份，新方案另起文件名</td>
+</tr>
+<tr>
+<td>起草项目说明</td>
+<td><code>/init</code></td>
+<td>先检查有没有已有说明</td>
+</tr>
+<tr>
+<td>管当前任务的记忆行为</td>
+<td><code>/memories</code></td>
+<td>分「使用已有记忆」和「生成未来记忆」两项；全局开关在设置里</td>
+</tr>
+<tr>
+<td>调整交流风格</td>
+<td><code>/personality</code></td>
+<td>取决于模型支持；只影响回答风格</td>
+</tr>
+<tr>
+<td>看连接服务状态</td>
+<td><code>/mcp</code></td>
+<td>只用于查看；安装和认证在设置里做</td>
+</tr>
+<tr>
+<td>显示或收起桌面宠物</td>
+<td><code>/pet</code></td>
+<td>可选的活动入口</td>
+</tr>
+<tr>
+<td>批准一次适用的重试</td>
+<td><code>/approve</code></td>
+<td>仅用于最近一次自动审核拒绝的适用情形</td>
+</tr>
+<tr>
+<td>审查代码改动</td>
+<td><code>/review</code></td>
+<td>审阅文稿直接发消息说明对象和标准</td>
+</tr>
+<tr>
+<td>向产品提交意见</td>
+<td><code>/feedback</code></td>
+<td>意见发给OpenAI；提交前核对日志范围</td>
+</tr>
+</tbody>
+</table></div>
+<p>选技能用Codex的<code>$</code>菜单；文件、插件、应用或浏览器的<code>@</code>候选，则按当前输入区实际提供的对象选择。同一个<code>@</code>后面可以是不同对象，发送前看清加入的是文件、标签还是工具。</p>
+<h2 id="quick-reference-常用默认快捷键">常用默认快捷键</h2>
+<p>快捷键可以自定义。下表与自己的键位不一致时，到Settings的Keyboard shortcuts搜索动作名称，查看当前绑定。<a href="https://learn.chatgpt.com/docs/reference/commands" target="_blank" rel="noopener">官方命令与键位</a></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>动作</th>
+<th>Windows</th>
+<th>Mac</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>打开设置</td>
+<td>Ctrl+,</td>
+<td>⌘,</td>
+</tr>
+<tr>
+<td>打开快捷键设置</td>
+<td>Ctrl+/</td>
+<td>⌘/</td>
+</tr>
+<tr>
+<td>打开命令菜单</td>
+<td>Ctrl+Shift+P或Ctrl+K</td>
+<td>⌘⇧P或⌘K</td>
+</tr>
+<tr>
+<td>打开文件夹 Open folder</td>
+<td>Ctrl+O</td>
+<td>⌘O</td>
+</tr>
+<tr>
+<td>新任务 New chat</td>
+<td>Ctrl+N</td>
+<td>⌘N</td>
+</tr>
+<tr>
+<td>显示或隐藏侧栏</td>
+<td>Ctrl+B</td>
+<td>⌘B</td>
+</tr>
+<tr>
+<td>查找当前任务文字</td>
+<td>Ctrl+F</td>
+<td>⌘F</td>
+</tr>
+<tr>
+<td>搜索项目文件</td>
+<td>Ctrl+P</td>
+<td>⌘P</td>
+</tr>
+<tr>
+<td>显示文件树</td>
+<td>Ctrl+Shift+E</td>
+<td>⌘⇧E</td>
+</tr>
+<tr>
+<td>重命名当前任务</td>
+<td>Ctrl+Alt+R</td>
+<td>⌘⌥R</td>
+</tr>
+<tr>
+<td>置顶当前任务</td>
+<td>Ctrl+Alt+P</td>
+<td>⌘⌥P</td>
+</tr>
+<tr>
+<td>归档当前任务</td>
+<td>Ctrl+Shift+A</td>
+<td>⌘⇧A</td>
+</tr>
+<tr>
+<td>打开Activity</td>
+<td>Ctrl+Alt+U</td>
+<td>⌘⌥U</td>
+</tr>
+<tr>
+<td>开始听写</td>
+<td>Ctrl+Shift+D</td>
+<td>Control+Shift+D</td>
+</tr>
+</tbody>
+</table></div>
+<p>听写先把话转成输入框中的文字，检查后再发送；实时语音是另一项功能。批准请求打开时，Enter用于批准，Esc用于拒绝，这两个键只在请求打开时起这个作用。普通运行、Goal和定时安排各有自己的控制，分别见第8、17、24章。</p>
+<h2 id="quick-reference-设置地图">设置地图</h2>
+<p>先打开Settings，再按当前需要找对应分类。界面排列会变化，以下强调设置名称与作用。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>主要用处</th>
+<th>相关章节</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General</td>
+<td>运行中补充采用Steer还是Queue，部分模式的启用与运行选项</td>
+<td>7、8</td>
+</tr>
+<tr>
+<td>Keyboard shortcuts</td>
+<td>查找和调整默认键位</td>
+<td>3、12</td>
+</tr>
+<tr>
+<td>Notifications</td>
+<td>完成、待回答、待批准等提醒</td>
+<td>8</td>
+</tr>
+<tr>
+<td>Personalization</td>
+<td>交流风格、个人说明、Enable memories</td>
+<td>19</td>
+</tr>
+<tr>
+<td>Archived chats</td>
+<td>桌面应用在Settings → Archived chats中，用Unarchive找回归档任务</td>
+<td>12</td>
+</tr>
+<tr>
+<td>Browser</td>
+<td>内置浏览器的网站、资料与下载设置</td>
+<td>22</td>
+</tr>
+<tr>
+<td>Computer use</td>
+<td>应用访问、扩展浏览器连接与对应网站管理</td>
+<td>22、23</td>
+</tr>
+<tr>
+<td>MCP servers</td>
+<td>直接连接服务的启用、认证和设置</td>
+<td>21</td>
+</tr>
+<tr>
+<td>Pets</td>
+<td>可选桌面宠物与浮动入口</td>
+<td>本附录</td>
+</tr>
+</tbody>
+</table></div>
+<p>当前任务选什么模型和权限，回输入区核对。设置中让一种权限模式可选以后，每个任务仍要自己选中。账号额度则到<a href="https://chatgpt.com/codex/settings/usage" target="_blank" rel="noopener">官方用量页</a>查看，并确认同一账号与工作区。</p>
+<h2 id="quick-reference-还有哪些按需功能">还有哪些按需功能</h2>
+<p>下列功能本书案例都用不到。有实际需要时，按对应官方页确认入口和条件。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>功能</th>
+<th>能帮助什么</th>
+<th>需要知道的条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/image-generation" target="_blank" rel="noopener">图片生成与编辑</a></td>
+<td>根据描述制作图片，或对参考图片提出修改</td>
+<td>生成图片与读懂截图是两项能力；结果中的文字、细节要核对</td>
+</tr>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/visualizations" target="_blank" rel="noopener">Visualizations</a></td>
+<td>用图表、关系图或交互形式理解信息</td>
+<td>桌面是预览，正在逐步开放；以当前是否出现Visualize候选为准</td>
+</tr>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/sites" target="_blank" rel="noopener">Sites</a></td>
+<td>创建、托管和分享网站或小应用</td>
+<td>当前为公开测试；部署链接对应真实上线，想先审阅要明确只保存、不部署</td>
+</tr>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/pets" target="_blank" rel="noopener">Pets</a></td>
+<td>浮动显示活动，提供输入和返回任务的入口</td>
+<td>Mac与Windows桌面可用；浮动入口新开的任务不自动属于某个项目</td>
+</tr>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/features/codex-micro" target="_blank" rel="noopener">Codex Micro</a></td>
+<td>用专用硬件快捷切换任务、语音输入和触发动作</td>
+<td>它是控制硬件，不是模型；入门用不到</td>
+</tr>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/customization/computer-history" target="_blank" rel="noopener">Computer History</a></td>
+<td>整理允许的近期应用活动供以后查找</td>
+<td>Mac可选、默认关闭，账号与组织条件见第19章</td>
+</tr>
+<tr>
+<td><a href="https://learn.chatgpt.com/docs/remote" target="_blank" rel="noopener">Remote</a></td>
+<td>在手机查看和引导连接电脑上的任务</td>
+<td>电脑仍负责运行，需唤醒和联网，见第17章</td>
+</tr>
+</tbody>
+</table></div>
+<p>生成了图、创建了安排、接上了服务，各自只说明这一步做完了。结果对不对，仍按前面各章的办法检查。</p>
+<h2 id="quick-reference-遇到问题先保留什么">遇到问题，先保留什么</h2>
+<p>先保留出错前后的要求、完整错误文字、相关文件路径与当前版本。需要截图时，去掉与问题无关的信息。然后按现象查原因：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>现象</th>
+<th>先核对</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>菜单没有某个功能</td>
+<td>平台、当前入口、账号工作区、版本及开放条件</td>
+</tr>
+<tr>
+<td>一直没有继续</td>
+<td>当前是在运行，还是等回答、批准或环境恢复</td>
+</tr>
+<tr>
+<td>文件找不到</td>
+<td>项目是否正确、路径起点、文件名与实际目录</td>
+</tr>
+<tr>
+<td>聊天有内容却没有文件</td>
+<td>是否真的写入、保存到了哪一处、是否报错</td>
+</tr>
+<tr>
+<td>预览没变化</td>
+<td>是否打开了同一文件的正确版本，是否需要重新打开</td>
+</tr>
+<tr>
+<td>搜索给了链接却说不清依据</td>
+<td>是否读过原页，来源是否支持该平台与条件</td>
+</tr>
+<tr>
+<td>插件安装后没有工具</td>
+<td>新任务、启用状态、账号连接与对象权限</td>
+</tr>
+<tr>
+<td>浏览器找不到页面</td>
+<td>扩展连接、正确用户配置、标签与网站允许名单</td>
+</tr>
+<tr>
+<td>电脑操作不可用</td>
+<td>插件启用、平台要求、系统权限、应用批准及目标窗口</td>
+</tr>
+<tr>
+<td>定时没有结果</td>
+<td>保存状态、时区与下次时间、电脑应用、文件和权限</td>
+</tr>
+</tbody>
+</table></div>
+<p>描述故障时，可以说：「我在什么平台、哪个任务里做了什么，预期看到什么，实际出现什么。」需要产品支持时使用<code>/feedback</code>，并核对准备发送的信息与可选日志。</p>
+<h2 id="quick-reference-术语回查">术语回查</h2>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>词</th>
+<th>本书中的含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>项目</td>
+<td>组织相关工作；本地项目连接电脑中的工作文件夹</td>
+</tr>
+<tr>
+<td>任务、聊天、对话</td>
+<td>一次持续工作的交流记录；本书统一主要称任务</td>
+</tr>
+<tr>
+<td>路径</td>
+<td>文件或文件夹的位置；相对路径依赖当前起点</td>
+</tr>
+<tr>
+<td>模型</td>
+<td>理解信息、作出判断并生成输出的核心能力</td>
+</tr>
+<tr>
+<td>Effort</td>
+<td>模型投入的推理程度；回答长短由要求决定</td>
+</tr>
+<tr>
+<td>Power</td>
+<td>当前界面提供的预设组合，具体选择看控件</td>
+</tr>
+<tr>
+<td>token、credits</td>
+<td>信息处理与适用用量计量中的不同单位，见第5章</td>
+</tr>
+<tr>
+<td>沙箱、批准</td>
+<td>技术访问范围与越界请求如何处理，见第7章</td>
+</tr>
+<tr>
+<td>上下文</td>
+<td>当前一轮供模型理解和处理的信息</td>
+</tr>
+<tr>
+<td>Plan、Goal</td>
+<td>先讨论做法与持续推进目标，分别有自己的控制</td>
+</tr>
+<tr>
+<td>Skill</td>
+<td>在适用任务中读取的一套可复用做法与资源</td>
+</tr>
+<tr>
+<td>插件、MCP</td>
+<td>安装能力包，以及连接模型与工具的方式</td>
+</tr>
+<tr>
+<td>批注</td>
+<td>指向成果某处的意见；批准管的是操作能否执行</td>
+</tr>
+</tbody>
+</table></div>
+<p>官方入口：<a href="https://chatgpt.com/download" target="_blank" rel="noopener">桌面下载</a>、<a href="https://learn.chatgpt.com/docs" target="_blank" rel="noopener">文档首页</a>、<a href="https://learn.chatgpt.com/docs/quickstart" target="_blank" rel="noopener">快速开始</a>、<a href="https://learn.chatgpt.com/docs/changelog" target="_blank" rel="noopener">更新说明</a>。遇到具体平台步骤，以对应章节列出的专页继续核对；实际参考范围见<a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/main/参考来源与致谢.md" target="_blank" rel="noopener">参考来源与致谢</a>。</p><nav class="pager"><a class="prev" href="scheduled-work.html"><small>← 上一章</small><span>第24章 定时任务：让跑通的工作按时再做</span></a><span></span></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#quick-reference-我想做这件事回哪一章">我想做这件事，回哪一章</a></li><li><a href="#quick-reference-输入区的常用命令">输入区的常用命令</a></li><li><a href="#quick-reference-常用默认快捷键">常用默认快捷键</a></li><li><a href="#quick-reference-设置地图">设置地图</a></li><li><a href="#quick-reference-还有哪些按需功能">还有哪些按需功能</a></li><li><a href="#quick-reference-遇到问题先保留什么">遇到问题，先保留什么</a></li><li><a href="#quick-reference-术语回查">术语回查</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

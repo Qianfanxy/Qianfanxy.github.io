@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第24章 定时任务：让跑通的工作按时再做 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="scheduled-work">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html" class="active" aria-current="page"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="scheduled-work">第24章 定时任务：让跑通的工作按时再做</h1>
+<p>Goal解决的是「现在围绕一个目标持续做」。定时任务解决的是「到了指定时间，再做一次已经说清楚的工作」。还有一种更简单的情况，只是到时间提醒你一下，既不读材料也不生成文件。</p>
+<p>把这三种需要分开，再决定怎样安排。一个还没跑通的流程，定时以后只会把同样的问题按时再出一遍。所以先把单次工作做对，再让它按时重复。</p>
+<h2 id="scheduled-work-先手动完成同样的一次">先手动完成同样的一次</h2>
+<p>假设你每周想看一眼当前清单是否漏了原备忘中的要求。先回到「我的待办」项目，用普通任务提出一次只读检查：</p>
+<blockquote class="prompt">
+<p>读取「材料」中的两份备忘，以及我指定的当前清单「结果/待办清单-v2.txt」。检查事项、日期、数量和补充要求是否遗漏或改变，分别列出差异与无法确认的地方。只读，不自动更新状态或改文件。报告检查了哪些文件。</p>
+</blockquote>
+<p>打开原材料和当前清单，核对它的报告。路径错误、把已完成状态当成错误、漏看一份材料，都在这一次处理好。例如笔记本的「已完成」来自后来的新进展，就要在要求里说明，免得它拿最初的备忘去否定最新状态。</p>
+<p>单次流程清楚了，结果也容易检查，再考虑定时。每次还需要你临场解释很多条件的话，先把流程说明白。<a href="https://learn.chatgpt.com/docs/automations" target="_blank" rel="noopener">官方关于先测试后定时的建议</a></p>
+<h2 id="scheduled-work-每次回来应该做同一件什么事">每次回来，应该做同一件什么事</h2>
+<p>定时任务在以后运行，到时候没有「刚才」可言，所以要求里要写全：检查哪份材料，什么算值得报告，结果放哪里，哪些情况需要停下来。</p>
+<p>当前清单以后可能从v2更新到v3。计划如果一直固定检查v2，每次都按时成功，查的却是一份过期文件。可以保留一份写明当前版本的说明，让它每次先读；也可以在版本变化时直接更新定时任务。靠文件名排序去猜最新版，是最容易出错的办法。</p>
+<p>内容没有变化时，你是希望仍收到一条简短记录，还是只在发现问题时才提醒，也写清楚。否则周期工作会攒下一堆看不出用处的消息。</p>
+<h2 id="scheduled-work-选择回到原任务还是每次独立运行">选择回到原任务，还是每次独立运行</h2>
+<p>桌面定时支持在原任务中接着做，也支持每次启动独立任务。前者适合持续跟进同一件事，保留相关上下文；后者适合每轮都依据固定要求重新检查，结果分别留在Scheduled中。<a href="https://learn.chatgpt.com/docs/automations" target="_blank" rel="noopener">定时任务的目的地</a></p>
+<p>本例每周核对一次清单，选独立运行，各周的讨论就不会混在一起。想让它持续跟进同一个问题、直到某个明确状态出现，则可以要求回到原任务，并写出停止条件。</p>
+<p>普通的文件夹项目可以直接运行定时任务。Git和Worktree是原本就使用Git、需要隔离改动的项目才涉及的选择，这里的只读核对用不到。</p>
+<h2 id="scheduled-work-用对话建立安排再核对保存结果">用对话建立安排，再核对保存结果</h2>
+<!-- diagram: FIG-026 -->
+<figure><img src="img/FIG-026.webp" alt="定时任务创建表单依次包含Name、Projects、Prompt和Schedule，右下是Create；中文说明对应名称、项目、每次要求和时间。" width="1448" height="1086" loading="lazy"><figcaption>定时任务创建表单依次包含Name、Projects、Prompt和Schedule，右下是Create；中文说明对应名称、项目、每次要求和时间。</figcaption></figure>
+<p><em>图：创建表单依次核对名称（Name）、项目（Projects）、每次要求（Prompt）和时间（Schedule）。看到这张表单还不等于保存成功，完成创建后仍要到Scheduled核对实际安排。</em></p>
+<!-- /diagram: FIG-026 -->
+
+<p>在已经跑通的任务里，可以直接要求Codex创建定时安排。下面写东京时间，是为了把时区说清楚，实际使用时换成你所在地区的时区：</p>
+<blockquote class="prompt">
+<p>将刚才确认的只读清单核对设为每周一上午9点，时区Asia/Tokyo。每次在「我的待办」项目启动独立任务，使用本轮已经确认的材料与当前清单路径。只报告差异和未知，不改文件、不代办事项。</p>
+<p>若文件缺失或无法读取，请报告失败位置，不猜内容。创建后列出保存的要求、运行项目、时区、下次运行时间和结果入口，便于我核对。</p>
+</blockquote>
+<p>官方支持从对话创建或更新计划，并说明每轮回到原任务还是新建任务。任务内如果生成了设置卡片或需要选择，核对后完成界面要求的保存操作。聊天里出现计划文字，计划还不算建好。</p>
+<p>接着打开侧栏的 <strong>Scheduled</strong>，找到这项安排，核对名称、状态、频率和下次时间。显示的时区或时间与你的要求不符，先改正再启用。电脑换了地区、遇到夏令时或本地显示方式变化时，也要重新看一眼实际的下次运行时间。</p>
+<h2 id="scheduled-work-本地文件任务仍依赖电脑">本地文件任务仍依赖电脑</h2>
+<p>需要本地项目的任务，运行时电脑要开启、应用在运行、文件夹仍可访问。睡眠、断网、退出账号、移动材料或失去权限，都可能使结果不完整。<a href="https://learn.chatgpt.com/docs/automations" target="_blank" rel="noopener">本地运行条件</a></p>
+<p>后台任务使用相应的默认沙箱与组织规则。你不在屏幕前，没有人来点批准，某些越界操作可能直接失败；组织设置也会影响行为。所以手动测试成功以后，还要看后台运行时的条件是否相同。</p>
+<p>遇到失败，先看任务是否需要访问项目之外的文件，能否把必要的副本放在明确位置，工具是否已经授权。只读本地清单的需求，按这个范围安排就行，用不着为此改成Full access。</p>
+<p>功能未对当前账号开放，或者组织不允许时，继续手动完成已经跑通的流程。网页端也有同名的定时功能，但它进不了你电脑里的文件夹。</p>
+<h2 id="scheduled-work-第一轮运行后还要看什么">第一轮运行后，还要看什么</h2>
+<p>到了约定时间，在Scheduled查看这项任务的运行记录和需要注意的结果；安排在原任务内的，回到对应任务核对。打开结果，检查实际读取的文件、核对范围和报告内容。状态显示「完成」，只说明它跑完了。</p>
+<p>最初几轮尤其值得检查：有没有因为当前文件换名而读错，是否对没有变化的内容反复报警，失败时有没有说清原因。根据真实结果调整要求或频率，比一开始就设一个很复杂的周期容易维护。</p>
+<p>没有按时出现结果时，先核对计划是否启用、时间与时区、电脑和应用状态、文件位置、账号与权限，再决定是否重跑。本书不假定错过的运行会自动补上；补跑之前先看已有记录，免得重复处理。</p>
+<h2 id="scheduled-work-更新暂停恢复和删除">更新、暂停、恢复和删除</h2>
+<p>计划需要变化时，先在Scheduled找到正确的项目与名称，或者在原任务中明确指出要改哪一个已有安排。可以说「把这项每周核对改到周二，保留其他要求」。重新创建一个会留下两个名字相似的安排，以后分不清。</p>
+<p>暂时不用，就要求暂停该计划，随后到Scheduled确认状态；准备继续时再恢复，并核对下次运行时间。彻底不需要了，删除这一项安排，并确认它不再计划执行。修改或暂停未来安排，管的是以后的运行；此刻正在运行的那一次，要按第8章的办法另行处理。</p>
+<p>删除安排以后，过去生成的文件和已经做过的外部操作都还在。历史成果需要清理的话，针对具体文件另作决定。</p>
+<p>第20章的Skill可以复用稳定流程，定时任务的要求里也可以点名调用某个技能。没有技能也没关系，一段经过实际检查的清楚要求，就能作为周期工作的基础。以后材料、模型或工具变了，先回到单次运行验证，可靠了再继续安排。</p>
+<p>到这里，你已经从安装和第一条消息，走到了设置、材料、检查、接续、扩展与定时。日常使用用不着每次动用全部功能。先看当前任务缺的是材料、判断、工具还是安排，再用相应的入口去补。</p><nav class="pager"><a class="prev" href="computer-use.html"><small>← 上一章</small><span>第23章 电脑操作：让Codex操作其他应用</span></a><a class="next" href="quick-reference.html"><small>下一章 →</small><span>附录：命令、设置、排障与术语</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#scheduled-work-先手动完成同样的一次">先手动完成同样的一次</a></li><li><a href="#scheduled-work-每次回来应该做同一件什么事">每次回来，应该做同一件什么事</a></li><li><a href="#scheduled-work-选择回到原任务还是每次独立运行">选择回到原任务，还是每次独立运行</a></li><li><a href="#scheduled-work-用对话建立安排再核对保存结果">用对话建立安排，再核对保存结果</a></li><li><a href="#scheduled-work-本地文件任务仍依赖电脑">本地文件任务仍依赖电脑</a></li><li><a href="#scheduled-work-第一轮运行后还要看什么">第一轮运行后，还要看什么</a></li><li><a href="#scheduled-work-更新暂停恢复和删除">更新、暂停、恢复和删除</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

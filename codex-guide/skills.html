@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第20章 Skill：把已经跑通的做法保存下来 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="skills">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html" class="active" aria-current="page"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="skills">第20章 Skill：把已经跑通的做法保存下来</h1>
+<p>项目说明保存的是「在这个文件夹里通常怎样工作」。如果你反复做的是一套具体流程，例如把几份零散备忘整理为清单，再核对遗漏并另存结果，就可以考虑把做法保存成 <strong>Skill，技能</strong>。</p>
+<p>技能把特定任务的说明和必要资源放在一起，供Codex在适用的时候读取。它复用的是已经有效的做法。流程还没想清楚时，先别急着做成技能。</p>
+<h2 id="skills-什么时候值得做成技能">什么时候值得做成技能</h2>
+<p>只改一次文件名，直接说就可以。每次都要重讲输入要求、整理规则和检查标准，而且已经做过几次、知道哪些地方容易出错，就值得保存。</p>
+<p>技能和模型各有分工：模型负责理解和执行，技能提供这类工作该遵循的流程。材料、工具和权限仍要另外具备。技能里写了「读取邮箱」，邮箱还得先连接和授权。<a href="https://learn.chatgpt.com/docs/skills-and-plugins" target="_blank" rel="noopener">技能的用途</a></p>
+<p>一个技能只处理一个明确的问题比较好。把整理清单、写文章、查网页和发消息塞进同一个技能，适用范围就含混了，是否按预期工作也难以检查。</p>
+<h2 id="skills-先看看有没有已经可用的">先看看有没有已经可用的</h2>
+<p>在桌面侧栏打开 <strong>Skills</strong>，查看已有技能的名称和说明。回到Codex输入区，也可以输入 <strong><code>$</code></strong>，从可用项里选择；已启用的技能还可能出现在斜线菜单中。菜单里实际出现的才是你能用的，书中的示例名称只是举例。<a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">查看与创建技能</a></p>
+<p>Codex支持用<code>$</code>明确选择技能，也可以根据请求与技能描述的匹配程度，自己决定何时使用。名称相似的技能，做法可能不同，使用前看清适用范围、需要的输入和会产生的结果。</p>
+<p>某个技能要求联网服务、特定软件或模板时，先检查这些条件。当前只处理本地文本，选只依赖本地文件的做法就行，下一章的插件连接可以晚点再学。</p>
+<h2 id="skills-用内置创建器把已有流程写下来">用内置创建器，把已有流程写下来</h2>
+<p>Codex提供内置的 <strong><code>$skill-creator</code></strong>，用于创建或更新技能，用它之前无须安装任何外部服务插件。输入<code>$</code>找到并选择它，再说明你已经跑通的流程、希望何时调用、哪些内容每次会变。<a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">官方创建方式</a></p>
+<!-- diagram: FIG-022 -->
+<figure><img src="img/FIG-022.webp" alt="输入框里的$上方出现Skill Creator菜单项，说明为Create or update a skill，右侧标记System。" width="1448" height="1086" loading="lazy"><figcaption>输入框里的$上方出现Skill Creator菜单项，说明为Create or update a skill，右侧标记System。</figcaption></figure>
+<p><em>图：输入$后，可以在可用技能中找到Skill Creator。图中保留真实英文名称；本书拟定的notes-to-todos要先创建，才会出现在你自己的可用项里。</em></p>
+<!-- /diagram: FIG-022 -->
+
+<p>沿用前面的清单整理，可以这样描述：</p>
+<blockquote class="prompt">
+<p>请把我们已经完成并核对过的「零散备忘整理为待办清单」做成一个个人技能，名称先拟为notes-to-todos，只用自然语言说明，不加脚本。</p>
+<p>每次由我指定输入文件和输出位置。先确认读到哪些材料，再合并同一事项，保留已有日期、数量和状态；没有依据的信息保持未知。原材料不改，不代办记录里的事情。输出后对照来源检查遗漏、重复和事实变化，再报告实际文件位置。</p>
+<p>技能只在整理备忘为清单时使用，不要接管所有文章修改。先让我看说明草稿，指出需要的文件和工具条件，再保存为当前Codex可发现的个人技能，并报告准确名称与保存位置。</p>
+</blockquote>
+<p><code>notes-to-todos</code>是本例拟定的名称，你的应用里并没有预装它。创建器可能询问用途或输入格式，回答会影响流程的问题即可。官方默认倾向于只写指令；这个流程里没有需要精确计算或额外工具的环节，用自然语言说明就够了。</p>
+<h2 id="skills-检查技能里的要求再试用">检查技能里的要求，再试用</h2>
+<p>一个技能通常有自己的文件夹，主要说明放在 <strong><code>SKILL.md</code></strong> 中，至少包含名称、描述和具体做法。这些字段由创建器来写，你要做的是把它给出的说明读一遍。</p>
+<p>重点检查几个容易被写死的地方：是否固定成某台电脑上的路径，是否假定文件永远叫某个名字，是否把「日期未定」擅自改成自动安排，是否多出了发送或删除动作。每次会变化的部分留给调用时指定，技能才能用于下一份材料。</p>
+<p>保存后，检查Skills或输入菜单里是否出现对应项。本地技能与修改通常会自动被发现；没有出现时，核对保存位置、作用范围和名称，必要时重启Codex。<a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">本地发现与更新</a></p>
+<p>新建一个任务，选择这个技能，并提供一套已知材料和新的输出位置，例如：</p>
+<blockquote class="prompt">
+<p>使用刚保存的技能，读取「材料」里的两份原备忘，把结果另存为「结果/技能试用清单.txt」。本次仍是最初记录的状态，不根据其他任务猜新的完成情况。</p>
+</blockquote>
+<p>等结果保存以后，按第4章的关键事实核对。技能能被选中，说明入口有了；生成的内容符合要求，才说明这次使用有效。试用结果不对时，先定位问题出在技能规则、当前材料还是本次要求，再修改对应的部分。</p>
+<h2 id="skills-描述决定技能什么时候被用上">描述决定技能什么时候被用上</h2>
+<p>Codex开始时先看到技能名称和描述，决定适用后再读取完整说明。所以描述要说清什么时候用，也说清不适合什么情形。一个叫「万能助手」的技能，它无从判断什么时候该选。<a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">技能说明的加载方式</a></p>
+<p>只希望在明确选择时才调用的话，让创建器按官方支持的调用设置调整。在说明里写一句「平时不要乱用」，效果没有保证。改后分别试一次明确调用和一次不相关的请求，看它是否还会过度介入。</p>
+<p>结果模板、参考材料可以随技能保存，前提是有实际用途。每次任务的私人原件不要收进技能，以后使用时会混入旧内容。保留无敏感信息的示例与规则，就足以说明做法。</p>
+<h2 id="skills-修改停用与重新使用">修改、停用与重新使用</h2>
+<p>发现技能遗漏了一条规则，可以选择<code>$skill-creator</code>，明确要更新哪个已有技能及其路径，说明只改哪一处。修改后用原来容易出错的材料再检查一遍，确认已经有效的部分没有被破坏。</p>
+<p>暂时不希望它被使用时，分清「这次别用」和「长期停用」。前者写在当前请求里；后者使用本地技能配置中的启用设置。你可以让Codex先定位该技能的准确路径，说明将修改哪条配置，再只把这一个技能设为停用，保留文件与其他设置，之后重启并检查。整个过程在对话里完成，技能文件夹也留着，以后还能重新启用。<a href="https://learn.chatgpt.com/docs/build-skills" target="_blank" rel="noopener">官方停用方式</a></p>
+<p>材料结构变了，技能也要跟着更新。上一次跑通的技能，遇到新文件未必适用；每次仍要提供当前的输入、输出与特殊条件，重要成果照常核对。</p>
+<p>Mac还有可选的 <strong>Record &amp; Replay</strong>，可以把一次演示操作整理成技能，需要Computer Use可用并启用。它适合稳定、便于演示的流程；本书的文字流程用对话创建就够了。<a href="https://learn.chatgpt.com/docs/extend/record-and-replay" target="_blank" rel="noopener">录制与重放说明</a></p><nav class="pager"><a class="prev" href="personalization.html"><small>← 上一章</small><span>第19章 不想每次重说：偏好、项目说明与记忆</span></a><a class="next" href="plugins.html"><small>下一章 →</small><span>第21章 插件与MCP：接入需要的工具和资料</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#skills-什么时候值得做成技能">什么时候值得做成技能</a></li><li><a href="#skills-先看看有没有已经可用的">先看看有没有已经可用的</a></li><li><a href="#skills-用内置创建器把已有流程写下来">用内置创建器，把已有流程写下来</a></li><li><a href="#skills-检查技能里的要求再试用">检查技能里的要求，再试用</a></li><li><a href="#skills-描述决定技能什么时候被用上">描述决定技能什么时候被用上</a></li><li><a href="#skills-修改停用与重新使用">修改、停用与重新使用</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第1章 Codex能帮你做什么 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="intro">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html" class="active" aria-current="page"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="intro">第1章 Codex能帮你做什么</h1>
+<p>电脑里有几份记录，需要整理成一份说明；一张表里混着不同写法，想把同类项目归到一起；看完几份资料，还想知道它们在哪些地方说得不一样。这些工作说不上难，却要在文件之间来回切换，边读边复制，再检查有没有漏掉什么。</p>
+<p>Codex可以参与这样的工作。你用日常语言说明要求，提供需要的材料，它可以在允许的范围内读取、处理和修改文件，调用工具完成任务。得到第一版以后，你还可以继续指出问题，让它围绕这份成果修改。</p>
+<p>它给普通用户带来的价值，很大一部分就在这里：<strong>把你想做的一件事，推进到实际可用的结果。</strong> 要整理材料，可以让它读材料并保存整理稿；要改一份文件，可以让它找到对应位置，按要求修改，再告诉你改了什么。使用时，你既要会提出要求，也要会检查它实际做到了哪一步。</p>
+<h2 id="intro-先看看它能帮你得到什么">先看看，它能帮你得到什么</h2>
+<p><strong>整理和比较资料。</strong> 比如，一份记录写了几项要办的事，另一份补充了时间和数量。可以请Codex把相关信息放到一起，合并重复，标出缺失，整理成一份清单。材料较长时，也可以请它比较不同版本，找出变化，再写一份说明。</p>
+<p>整理时最容易出问题的是意思被改掉。「周五前提交」压缩成「周五提交」，截止时间就成了当天。一张购物记录里有「笔记本」和「横线纸质本」，能不能合并，要看它们指的是不是同一种东西，名称相像只是线索。你可以请Codex先列出建议合并的项目和理由，把拿不准的留下来确认。这样，它的判断就摆在你面前，便于检查。</p>
+<p>本书第一次完整使用就选择短备忘：两份材料，四件待办。任务小，信息如何合并、有没有遗漏，你能直接看出来。以后换成长报告，检查的道理仍然相通。</p>
+<p><strong>生成和修改文件。</strong> 可以交给它几份资料，说明文件给谁看、需要包含什么，再要求生成报告、表格或演示文稿。对于支持的文件类型，桌面应用可以在聊天旁边显示预览，让你一边看，一边提出意见。</p>
+<p>这里值得多说一句「给谁看」。同一份记录，写给参加过讨论的人，可能只需列出决定；写给没有参加的人，就要补上背景，说明为什么这样做。如果只说「写一份说明」，这些条件就只能由Codex自己猜。补上用途，往往比要求「更专业一点」有用。</p>
+<p>例如，你可以这样交代一份说明稿：</p>
+<blockquote class="prompt">
+<p>请根据我提供的记录，写一份给新加入同事看的说明。先交代这件事要解决什么，再写已经确定的安排，最后列出还需要确认的问题。记录里没有的信息不要补写。请保存成可以继续编辑的文档，并告诉我保存位置。</p>
+</blockquote>
+<p>这段话没有规定每一步怎么做，却说明了材料、读者、内容顺序和交付方式。初稿出来后，再指出「背景太长」「第二段遗漏了一个限制」，修改就容易对准具体问题。</p>
+<p><strong>查资料并整理依据。</strong> 遇到陌生主题，可以请Codex使用可用的联网工具查找资料，比较不同来源，把结论和出处放在一起。需要了解产品的最新功能时，可以要求优先看官方说明，区分当前已经可用的功能与仍在开放中的功能。</p>
+<p>你最终需要的常常是一份选择依据，一堆链接帮不上多少忙。比如比较两种服务的说明，可以先列出自己在意的条件，再让它查对应信息；找不到的项目留空并说明。拿到结果后，打开重要来源，核对它支持的是哪一句结论。</p>
+<p>回答语气肯定，与刚刚查过资料是两回事。是否实际使用了检索、来源写于什么时候、有没有覆盖你的问题，都要看具体结果。第11章会把这一步展开。</p>
+<p><strong>制作网页和小工具。</strong> 如果想把资料做成方便浏览的页面，或者让电脑按固定规则计算、分类，Codex也可以编写相应程序。程序就是让电脑按要求执行的一组指令。你负责说明输入、规则和希望看到的结果，再用熟悉的例子检验。</p>
+<p>例如，购物预算小工具让你输入数量和单价，再计算总额。检查时可以改一个数量，看总额是否随之改变；也可以留一个空白，看它怎样提醒。页面漂亮与计算正确，要分别看。本版用这样的用途帮助你理解能力，重点仍是学会使用Codex，完整的网页制作课程留给以后。</p>
+<p>具体能用哪些工具和功能，受平台、账号、开放进度及组织设置影响。看到别人完成某项演示，可以借鉴用途；在自己的电脑上，还要看相应入口是否可用。</p>
+<h2 id="intro-为什么它能把工作继续往下做">为什么它能把工作继续往下做</h2>
+<p>传统软件通常等你选择某个按钮：排序、替换、另存。使用Codex时，你可以先说明目标，例如「把这些备忘整理成待办清单，并保存下来」。它再根据材料与要求，决定需要读取哪些内容、怎样整理、调用什么工具，以及是否需要向你补问。</p>
+<p>这类能够围绕目标安排步骤、使用工具并继续处理的AI，常被称为 <strong>AI agent（AI代理）</strong>。名称知道就够了，值得理解的是它的工作方式：一次任务可能包含多次读取、判断和修改，中间的进展消息只说明走到了某一步，成果要等它交出来再看。</p>
+<p>开篇讲过，模型负责理解和判断，工具让它能够完成具体操作。两者配合，才可能把一句「帮我整理」落实到文件上。材料和工具都需要你交到当前任务里：文件虽然在你的电脑里，当前任务未必已经能访问；某个外部服务即使你平时在用，也可能还需要连接。</p>
+<p>提供材料有几种方式。几行文字可以直接贴进消息；一份文件可以作为附件；需要持续处理电脑里的一组文件时，可以连接它们所在的文件夹。后两种的用途不同：附件是交给它读的，连接文件夹以后，它才能直接在里面保存和修改。第3章会实际打开项目文件夹，第4章接着处理其中的材料。</p>
+<h2 id="intro-你需要参与哪些判断">你需要参与哪些判断</h2>
+<!-- diagram: FIG-006 -->
+<figure><img src="img/FIG-006.webp" alt="提出要求后处理材料，打开成果并对照检查；具体反馈返回处理材料，继续修改。" width="1448" height="1086" loading="lazy"><figcaption>提出要求后处理材料，打开成果并对照检查；具体反馈返回处理材料，继续修改。</figcaption></figure>
+<p><em>图：检查具体成果，再用明确反馈继续修改。</em></p>
+<!-- /diagram: FIG-006 -->
+
+<p>假设两份备忘都写了发照片，一份写截止时间，另一份写选10张。Codex可以把它们整理成一项，并保留两个要求。可如果你还没有决定发给哪些人，材料里也没写，名单就只能空着等你补。</p>
+<p>你的参与主要落在几处：确定目标，提供依据，决定操作范围，检查重要结果。哪些是已经发生的事，哪些只是打算，往往需要你说清。操作范围也由你定：请它整理一份写着「联系维修店」的待办清单，它做的是整理，联系维修店仍是你的事。</p>
+<p>成果出来以后，要检查它是否满足用途。文字文件就打开读，表格就核对关键数字，小工具就用具体输入试一遍。Codex可以先自行检查并报告结果，这能帮你发现一部分问题；最后仍要看实际成果。</p>
+<p>遇到问题，可以留在原任务里继续反馈。说「第二项的时间不对，原文是周五前」，比只说「不太好」更容易让它改准。第一条消息也用不着预见所有细节，看到初稿以后再决定增加一列、调整顺序或补充说明，是正常的使用过程。</p>
+<h2 id="intro-应用codex与模型分别是什么">应用、Codex与模型，分别是什么</h2>
+<p>安装时，你会遇到桌面应用；进入以后，又可能看到Chat、Work、Codex和GPT-6 Astra。把这几层分开，后面看界面就容易了。</p>
+<p><strong>桌面应用</strong>是你打开的工作窗口；<strong>Chat、Work和Codex</strong>是其中不同的使用入口；<strong>GPT-6 Astra等模型</strong>是处理请求时可以选择的模型。入口和模型是两层选择，进入Codex以后还要再选模型。</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>入口</th>
+<th>更常用来做什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chat</td>
+<td>提问、讨论、构思，以及来回修改一段文字</td>
+</tr>
+<tr>
+<td>Work</td>
+<td>围绕明确成果开展较完整的工作，如研究、报告和表格</td>
+</tr>
+<tr>
+<td>Codex</td>
+<td>使用开发工具、查看技术过程，同时也能处理研究、文档等工作</td>
+</tr>
+</tbody>
+</table></div>
+<p>Work和Codex的能力有重叠。本书选择Codex作为主线，是为了把它的工作方式、控制选项和常用功能讲清楚。如果你只想拿到成果，对技术过程没有兴趣，Work也能处理同类工作；本书讲的提要求、给材料和检查成果的方法，在那里同样用得上。</p>
+<p>在Codex里，你会看到一些技术过程，例如读取文件的命令。刚开始不需要照着输入，也不用逐字弄懂；先看它正在处理什么、是否遇到问题，以及成果在哪里。</p>
+<p>你可能还听过CLI或编辑器扩展，它们是其他使用入口，学桌面应用之前用不着先学它们。我们从桌面应用开始：先安装登录，认识第一屏，发一条简短消息，再用两份备忘完成一次从材料到文件的全过程。之后讲模型、Effort、权限和运行控制时，你就能把这些设置与已经做过的事情联系起来。</p>
+<h2 id="intro-相关官方资料">相关官方资料</h2>
+<p><a href="https://learn.chatgpt.com/docs/use-chatgpt" target="_blank" rel="noopener">使用方式与应用场景</a>、<a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener">如何提出要求</a>、<a href="https://learn.chatgpt.com/docs/artifacts-viewer" target="_blank" rel="noopener">文件预览与修改</a>、<a href="https://learn.chatgpt.com/docs/projects" target="_blank" rel="noopener">项目与本地文件</a>、<a href="https://learn.chatgpt.com/docs/quickstart" target="_blank" rel="noopener">桌面快速开始</a>。</p><nav class="pager"><a class="prev" href="latest-models.html"><small>← 上一章</small><span>开篇：GPT-6 Astra与现在的Codex</span></a><a class="next" href="desktop-setup.html"><small>下一章 →</small><span>第2章 安装应用，进入Codex</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#intro-先看看它能帮你得到什么">先看看，它能帮你得到什么</a></li><li><a href="#intro-为什么它能把工作继续往下做">为什么它能把工作继续往下做</a></li><li><a href="#intro-你需要参与哪些判断">你需要参与哪些判断</a></li><li><a href="#intro-应用codex与模型分别是什么">应用、Codex与模型，分别是什么</a></li><li><a href="#intro-相关官方资料">相关官方资料</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第6章 模型、Effort和快速模式，应该怎么选 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="models-effort">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html" class="active" aria-current="page"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="models-effort">第6章 模型、Effort和快速模式，应该怎么选</h1>
+<p>清单漏了「选10张照片」，原因可能有两种：模型没有处理好，或者补充说明根本没有读到。前一种可以考虑调整设置，后一种要先补材料。先分清这两种情况，再看模型菜单，才不会把所有问题都归结为「档位不够高」。</p>
+<h2 id="models-effort-先找到当前任务的设置">先找到当前任务的设置</h2>
+<!-- diagram: FIG-011 -->
+<figure><img src="img/FIG-011.webp" alt="模型控件中，GPT-6 Astra右边是Extra High和下拉箭头；中文圈注分别指出模型与推理投入。" width="1448" height="1086" loading="lazy"><figcaption>模型控件中，GPT-6 Astra右边是Extra High和下拉箭头；中文圈注分别指出模型与推理投入。</figcaption></figure>
+<p><em>图：模型控件的收起状态：GPT-6 Astra是型号，Extra High是来源当时选用的推理投入。本书不把这个组合当作默认或入门推荐；可选档位需打开自己当前的菜单查看。</em></p>
+<!-- /diagram: FIG-011 -->
+
+<p>打开准备继续的任务，查看输入框下方的模型与推理控件。每个任务的选择各自独立，先读当前显示，再决定要不要改。</p>
+<p>控件可能先显示 <strong>Power</strong> 预设。一个预设就是一组搭配好的型号和推理投入，你沿着较快或思考较多的方向挑一个就行。官方页面当前展示的六个预设依次是Luna High、Sol Light、Sol Medium、Astra Light、Astra Medium和Astra Extra High，其中Sol Light只是该示例选中的一档，部分付费档位没有Astra Extra High。这张演示不代表每个账号的默认设置；实际型号、档位和初始选中项，以你的控件显示为准。</p>
+<p>第一次使用可以保留当前的预设。需要明确指定型号时，再打开 <strong>Advanced</strong>，分别选择模型、<strong>Effort</strong>和可用的速度选项。例如想用GPT-6 Astra处理当前材料，就在Advanced中选择Astra，再选择Light，最后核对控件里的型号与档位。模型不在列表里时，按上一章核对账号和可用条件；用已有选项也能学完本书的小案例。</p>
+<p>输入框的斜杠菜单也提供相关入口：<strong><code>/model</code></strong>选择当前任务的模型，<strong><code>/reasoning</code></strong>选择推理投入。先从菜单选中动作，再在出现的选项中选择。在普通请求里写上一串设置词，应用并不会因此切换。</p>
+<h2 id="models-effort-模型选择先看工作需要什么判断">模型选择，先看工作需要什么判断</h2>
+<p>开篇已经介绍了Astra、Sol和Luna。现在可以把它们与做过的事联系起来：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>眼前的工作</th>
+<th>可以先考虑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按清楚的规则提取日期、分类或做小改动</td>
+<td>Luna，先看能否满足明确标准</td>
+</tr>
+<tr>
+<td>需要反复进行、持续处理的文档、应用或代码任务</td>
+<td>账号可用时考虑GPT-6.1 Sol，从当前默认设置开始</td>
+</tr>
+<tr>
+<td>多份资料相互影响，要求含混，必须反复取舍和核对</td>
+<td>Astra，尤其关注连续判断和成果完整性</td>
+</tr>
+</tbody>
+</table></div>
+<p>GPT-6.1 Sol有自己的开放进度，组织账号还可能需要管理员启用。列表里仍有GPT-6 Sol或其他已有型号时，可以继续用它们学习本书的例子。这张表给的是起步建议，各行之间有重叠。四项待办用较强的模型也能做，只是多半用不上；一个看似很短的问题，如果几句话之间有重要冲突，反而需要深入分析。</p>
+<p>假设一份材料写「照片周五前发」，另一份更新为「等朋友确认名单后再发」。先要判断第二句话是在补充还是改变原安排，并把冲突交给你确认。与照原文提取日期相比，难点增加了。选择模型时，看这些关系，比看文字有几页更有帮助。</p>
+<h2 id="models-effort-effort到底改变什么">Effort到底改变什么</h2>
+<p><strong>Effort是模型处理问题时投入多少推理。</strong> 同一个模型，可以用较少或较多的投入工作。回复的长短由你的要求决定：低档可以按要求写详细说明，高档也可能只给一句结论。权限大小则是另一项设置，下一章讲。</p>
+<p>桌面上常见的档位有以下几类，具体以当前模型提供的选项为准：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>档位</th>
+<th>可以怎样理解</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Light</td>
+<td>用于范围明确、需要的判断较少的工作</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>在速度与分析之间取得较均衡的起点</td>
+</tr>
+<tr>
+<td>High、Extra High</td>
+<td>为较难的分析、多步核对和取舍投入更多推理</td>
+</tr>
+</tbody>
+</table></div>
+<p>更高投入可能改善复杂任务，也会增加等待和使用量。遗漏的文件、没有确定的日期，调高档位都变不出来。遇到错误时，先检查材料与要求是否齐全，再判断是否需要更多推理。</p>
+<p>在Advanced里自己选档位时，官方给出的起步建议是：<strong>Astra用Light，Luna用High；GPT-6.1 Sol先保留客户端当前默认投入</strong>。这是建议的起点，各账号实际的默认值可能不同。三个型号的档位也没法横向比较：同样叫Light，Astra和Luna的能力并不相同。<a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener">模型与推理说明</a></p>
+<p>日常用法可以很朴素：先用建议起点或当前预设完成一份熟悉的材料，检查哪里不够。如果规则明确却仍反复漏掉关键条件，确认材料已经读全后，提高投入或换更适合的模型，再对照相同标准检查。一次只改一项。模型、材料、提示词、速度同时换，就看不出变化来自哪里。</p>
+<h2 id="models-effort-max和ultra为什么另说">Max和Ultra为什么另说</h2>
+<p><strong>Max</strong>让所选模型在一个任务上投入更多推理，适合确实需要深入处理、而且能接受等待和消耗的情况，日常默认用不到它。各型号支持的最高档并不一样，选项没有出现时，先看模型支持和应用设置。</p>
+<p><strong>Ultra</strong>会使用子代理，把可分开的部分交给多个代理并行处理。它在加深思考之外还加上了分工；Luna不支持Ultra。什么工作适合分开，为什么几个代理同时改同一个文件容易出问题，第18章解释。</p>
+<p>四项待办拆不出几个独立部分，开Ultra没有用处。工作确实能拆开，返回的结果又有办法汇总检查时，它才有具体价值。</p>
+<h2 id="models-effort-fast改变速度不代替effort">Fast改变速度，不代替Effort</h2>
+<p><strong>Fast</strong>是速度选择。开启后，支持的模型以更高用量换取更快处理。想少等一会儿，和想让模型把复杂关系多检查几轮，是两个需求，可以分别决定。</p>
+<p>在Advanced中查看当前模型可用的速度选项，或从桌面斜杠菜单选择 <strong><code>/fast</code></strong>切换，再核对状态。它能否使用，取决于模型与当前环境；菜单里没有这一项，就说明当前环境没有提供。</p>
+<p>本次核对的官方说明区分了两种用量：Fast使用订阅内含额度时，按Standard的2.5倍消耗；使用另购credits或Enterprise按量额度时，按2倍计。这些倍率说的是用量，不能读成任务会快2倍或2.5倍。任务总共要等多久，还包括读网页、等待外部服务和等你回答的时间，这些并不随模型速度一起缩短。<a href="https://learn.chatgpt.com/docs/agent-configuration/speed" target="_blank" rel="noopener">速度说明</a></p>
+<h2 id="models-effort-用结果决定是否调整">用结果决定是否调整</h2>
+<p>仍看「选10张照片」这一项。若Codex没有找到补充说明，先纠正文件位置；若读到了却没有写进清单，指出遗漏并要求对照两份材料复查；若面对多处矛盾总是忽略其中的关系，再考虑更高推理投入。每次调整设置，都要对着一个具体问题。</p>
+<p>已经满足要求的小改动，用不着换个名字更强的模型再跑一遍。可以记下对自己常用材料合适的设置，以及它通常需要你检查哪一类错误。下一次遇到相似工作，就有了比「最高档最放心」更具体的依据。</p>
+<p>相关官方资料：<a href="https://learn.chatgpt.com/docs/models" target="_blank" rel="noopener">模型与档位</a>、<a href="https://learn.chatgpt.com/docs/model-selection" target="_blank" rel="noopener">选择模型的依据</a>、<a href="https://learn.chatgpt.com/docs/agent-configuration/speed" target="_blank" rel="noopener">Fast</a>、<a href="https://learn.chatgpt.com/docs/reference/slash-commands" target="_blank" rel="noopener">桌面命令</a>。</p><nav class="pager"><a class="prev" href="account-usage.html"><small>← 上一章</small><span>第5章 账号与额度：看懂自己正在用什么</span></a><a class="next" href="permissions.html"><small>下一章 →</small><span>第7章 权限与批准：哪些事需要你决定</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#models-effort-先找到当前任务的设置">先找到当前任务的设置</a></li><li><a href="#models-effort-模型选择先看工作需要什么判断">模型选择，先看工作需要什么判断</a></li><li><a href="#models-effort-effort到底改变什么">Effort到底改变什么</a></li><li><a href="#models-effort-max和ultra为什么另说">Max和Ultra为什么另说</a></li><li><a href="#models-effort-fast改变速度不代替effort">Fast改变速度，不代替Effort</a></li><li><a href="#models-effort-用结果决定是否调整">用结果决定是否调整</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

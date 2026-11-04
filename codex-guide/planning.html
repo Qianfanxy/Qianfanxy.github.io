@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第15章 先商量怎么做：Plan与方案比较 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="planning">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html" class="active" aria-current="page"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="planning">第15章 先商量怎么做：Plan与方案比较</h1>
+<p>已经知道把哪一项改成什么，直接提出修改要求就可以。另一种情况是目标清楚，做法还没有定。比如你希望清单更方便每天查看，却拿不准应该按状态、日期还是原有事项排序。</p>
+<p>这时先把方案谈明白，可以少走一轮无用的修改。Codex中的 <strong>Plan，规划模式</strong>，就是让它先调查情况、提出做法，再进入实际修改的入口。</p>
+<h2 id="planning-先确认计划针对哪份材料">先确认计划针对哪份材料</h2>
+<!-- diagram: FIG-018 -->
+<figure><img src="img/FIG-018.webp" alt="输入框下方显示Plan标签，旁边有关闭叉号；中文圈注提示当前处于规划状态。" width="1448" height="1086" loading="lazy"><figcaption>输入框下方显示Plan标签，旁边有关闭叉号；中文圈注提示当前处于规划状态。</figcaption></figure>
+<p><em>图：输入区的Plan标记帮助你确认当前处于规划模式。切换后先核对模式，再说清这轮只讨论还是开始执行。</em></p>
+<!-- /diagram: FIG-018 -->
+
+<p>回到「我的待办」项目，打开准备继续的任务。确认当前版本是「结果/待办清单-v2.txt」，两份原始备忘仍可读取。当前版本要在讨论前说定，免得它把v1当成现状。</p>
+<p>在输入区键入<code>/</code>，选择 <strong><code>/plan</code></strong>，查看当前任务的模式提示，确认已经进入规划。官方将它定义为切换规划模式的命令；在多步任务中，可以先调查并提出方案，再修改。<a href="https://learn.chatgpt.com/docs/reference/slash-commands" target="_blank" rel="noopener">Plan入口</a></p>
+<p>进入以后，要说清调查范围：</p>
+<blockquote class="prompt">
+<p>先读「结果/待办清单-v2.txt」与两份原备忘，只讨论怎样方便我每天查看，不改文件。请比较按状态分组与保持事项顺序两种做法，说明会影响哪些内容。真正影响选择的问题先问我。</p>
+</blockquote>
+<p>先讨论，材料仍然要读。没有读过当前文件的计划，只能停留在泛泛的建议上。允许读取相关材料，同时限定本轮不改文件，计划才有具体依据。<a href="https://learn.chatgpt.com/docs/prompting" target="_blank" rel="noopener">官方关于先调查后修改的说明</a></p>
+<h2 id="planning-计划里最值得看的是取舍">计划里最值得看的是取舍</h2>
+<p>计划的好坏与步骤多少无关。看它有没有说明为什么采用这个顺序、哪些地方需要你决定、怎样判断完成。</p>
+<p>针对这份清单，可以比较：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>做法</th>
+<th>方便的地方</th>
+<th>需要留意的地方</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>按状态分组</td>
+<td>未完成事项集中，便于每天查看</td>
+<td>更新状态后，条目位置也会改变</td>
+</tr>
+<tr>
+<td>保持事项顺序</td>
+<td>与原清单逐项对照方便</td>
+<td>已完成项仍混在原来的位置</td>
+</tr>
+</tbody>
+</table></div>
+<p>这两种做法是本例的编辑判断，Codex并没有提供这样两个按钮。你也可以有第三种需求，例如先看有明确截止时间的事项；这会带来新的排序条件，还要说清日期未定的项放在哪里。</p>
+<p>如果它问「是否把日期未定的事项安排到本周」，可以回答不需要。这个问题关系到新增事实，为了排得整齐而定一个日期并不合适。如果它只是问分组标题用哪个词，而你没有偏好，就让它自己选一个清楚的说法。</p>
+<h2 id="planning-让计划留下可以检查的下一步">让计划留下可以检查的下一步</h2>
+<p>决定按状态分组以后，计划应当能落到实际文件上：读哪份当前版本，保留哪些事实，另存什么名字，检查哪些内容。只写「优化结构、提升体验」的计划，还没法执行。</p>
+<p>可以继续问：</p>
+<blockquote class="prompt">
+<p>我选按状态分组。请把方案收束成这次要改的内容、另存的文件名和完成后要核对的项目；不要增加图表或新的待办管理功能。</p>
+</blockquote>
+<p>这一句让方案停在当前需要的范围里。计划讨论得越久，越容易冒出「顺便还能做什么」。这些建议可以先记下，这次不做。</p>
+<p>什么时候可以结束规划？关键选择已经定了，材料足够，下一步动作与完成标准说得清楚，再讨论下去也不会改变判断，就可以开始做。</p>
+<h2 id="planning-从plan转到执行要明确切换">从Plan转到执行，要明确切换</h2>
+<p>认可了计划，文件还没有动。在规划模式里说一句「很好」，它可能只当作你对方案的评价。</p>
+<p>准备执行时，再使用 <strong><code>/plan</code></strong> 切出规划模式，核对当前模式显示，然后发送明确要求：</p>
+<blockquote class="prompt">
+<p>按刚才确认的按状态分组方案执行。以v2为依据，另存为「结果/待办清单-按状态.txt」，不覆盖已有文件。完成后对照v2核对四项内容、日期、数量和状态，再报告结果。</p>
+</blockquote>
+<p>这里有两个动作：退出规划，明确执行。前者改变当前工作模式，后者说明你认可的是哪一版计划、范围到哪里。中途讨论过几种方案的话，只发一个「继续」，它未必知道你选的是哪一种。</p>
+<p>执行过程中发现缺少影响结果的材料，可以回到讨论；只是一般的排版细节，就按已经确认的范围处理。等它报告完成，按第10章的方法打开实际文件检查。</p>
+<h2 id="planning-哪些任务值得先开plan">哪些任务值得先开Plan</h2>
+<p>改一个明确的文件名、纠正一处数量、补上一条已有依据的信息，直接说明就够了。需要比较做法、涉及多个成果，或者不同选择会带来明显后果时，Plan才帮得上忙。</p>
+<p>Plan和第17章的Goal用途不同。Plan解决的是「怎样做」，Goal用于持续多轮推进到完成。一个方案执行完就结束的工作，用普通任务就行。</p>
+<p>想保留另一种方案，可以用第13章的任务分支把讨论分开，并给两边指定不同的文件名。</p><nav class="pager"><a class="prev" href="clear-requests.html"><small>← 上一章</small><span>第14章 把想法说清楚：让Codex知道你要什么</span></a><a class="next" href="feedback.html"><small>下一章 →</small><span>第16章 第一版不满意：怎样反馈、核对和改进</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#planning-先确认计划针对哪份材料">先确认计划针对哪份材料</a></li><li><a href="#planning-计划里最值得看的是取舍">计划里最值得看的是取舍</a></li><li><a href="#planning-让计划留下可以检查的下一步">让计划留下可以检查的下一步</a></li><li><a href="#planning-从plan转到执行要明确切换">从Plan转到执行，要明确切换</a></li><li><a href="#planning-哪些任务值得先开plan">哪些任务值得先开Plan</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

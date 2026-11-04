@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第21章 插件与MCP：接入需要的工具和资料 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="plugins">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html" class="active" aria-current="page"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="plugins">第21章 插件与MCP：接入需要的工具和资料</h1>
+<p>前面的材料都在本地文件里。要处理的资料如果保存在某个外部服务中，Codex还需要相应的连接。这时装一个合适的插件，比来回下载和上传方便。</p>
+<p>先有明确需要，再连接相应工具。装之前想清楚两件事：这次连接要解决什么问题，它会让Codex接触到哪些材料。</p>
+<h2 id="plugins-插件提供什么">插件提供什么</h2>
+<p><strong>插件</strong>是一个可以安装的能力包，里面可能包含技能、连接工具和其他资源。技能说明怎样做，连接工具提供取得资料或执行动作的通道。各个插件的组成不同，有的不需要外部账号，有的带着好几个技能。<a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener">插件组成</a></p>
+<p>其中常见的一类连接叫 <strong>MCP，Model Context Protocol</strong>。对使用者来说，把它理解为模型与外部工具交换请求和结果的一套通用连接方式就可以。一个MCP服务可以提供查询资料、读取记录或执行操作的工具，具体能力由该服务决定。</p>
+<p>使用插件不需要懂MCP开发。入门的路径是从应用里的插件目录选择需要的能力，按提示连接。直接添加MCP服务，等有可信的服务给出明确设置方法时再做。</p>
+<h2 id="plugins-从一个只读需要开始">从一个只读需要开始</h2>
+<!-- diagram: FIG-023 -->
+<figure><img src="img/FIG-023.webp" alt="插件目录上方有Plugins、Manage与Search plugins，下方Computer Use条目右侧有加号；中文圈注区分查找能力和管理已装插件。" width="1448" height="1086" loading="lazy"><figcaption>插件目录上方有Plugins、Manage与Search plugins，下方Computer Use条目右侧有加号；中文圈注区分查找能力和管理已装插件。</figcaption></figure>
+<p><em>图：Plugins中先查找需要的能力，再打开详情核对提供者和条件。Manage是管理入口；卡片上出现加号，不表示外部服务已经连接。</em></p>
+<!-- /diagram: FIG-023 -->
+
+<p>假设你在某个文档服务中保存了一份无敏感信息的测试文档，只想让Codex读出标题和第一段。这个任务小，容易核对，只需要读取权限。</p>
+<p>打开桌面的 <strong>Plugins</strong>，搜索你实际使用的服务或需要的能力。进入详情，核对提供者、说明、支持入口和所需条件。标为 <strong>Desktop only</strong> 的插件需要桌面应用。</p>
+<p>确认合适后，使用详情中的安装加号。需要外部连接时，按提示登录相应服务：有的在安装过程中认证，有的第一次使用时才提出。看清浏览器或授权页中的账号，以及请求访问的范围，完成后回到应用。<a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener">安装与连接顺序</a></p>
+<p>安装完成，再开始一个新的Codex任务，让它使用刚装好的插件。可以直接写服务名和目标，也可以在<code>@</code>菜单中选择当前提供的插件入口。提供准确的文档链接或标题，并限定只读：</p>
+<blockquote class="prompt">
+<p>用刚连接的文档服务，读取我指定的测试文档。先确认标题和位置，再列出第一段文字与原文链接；不修改内容，不更改分享设置，也不发送给别人。</p>
+</blockquote>
+<p>最后到原服务打开文档，比较结果。返回的对象和内容都对，才说明这次连接对当前任务有效。手头没有外部服务账号的话，这一章可以只读不做，前面的本地文件路线照常使用。</p>
+<h2 id="plugins-五种状态逐层分清">五种状态，逐层分清</h2>
+<p>遇到「装了却不能用」，先看卡在哪一层：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>状态</th>
+<th>它说明了什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>已安装</td>
+<td>插件包进入当前环境</td>
+</tr>
+<tr>
+<td>已启用</td>
+<td>相关技能或工具允许被当前环境使用</td>
+</tr>
+<tr>
+<td>已登录或连接</td>
+<td>外部服务认证已经完成</td>
+</tr>
+<tr>
+<td>能访问指定对象</td>
+<td>当前账号确实有这份文档或记录的权限</td>
+</tr>
+<tr>
+<td>本次动作获准</td>
+<td>这次读取、修改或其他动作符合当前授权</td>
+</tr>
+</tbody>
+</table></div>
+<p>例如，你登录了一个文档账号，资料却属于另一个组织空间，仍然访问不了。插件装好以后，旧任务里也可能还没有新工具，所以官方流程要求安装后在新任务中使用。</p>
+<p>只读一份测试文档，就把对象限定在这一份。对象明确，才容易判断它请求的权限是否与任务相符。</p>
+<h2 id="plugins-mcp帮助看连接状态"><code>/mcp</code>帮助看连接状态</h2>
+<p>在当前任务的斜线菜单中选择 <strong><code>/mcp</code></strong>，可以查看已连接的MCP服务状态。它只用于查看，安装、登录和修复要到别处做。<a href="https://learn.chatgpt.com/docs/extend/mcp" target="_blank" rel="noopener">MCP状态与设置</a></p>
+<p>需要管理直接连接的服务时，进入 <strong>Settings → MCP servers</strong>。列表会显示服务是否启用，以及是否需要认证；需要登录的服务使用 <strong>Authenticate</strong>。已有服务名称相近时，先确认要处理的是哪一个。连接失败就重复添加，只会多出一条同名的记录。</p>
+<p>可信服务若明确要求直接添加MCP，可从 <strong>Add server</strong> 开始，按照提供者给出的名称、连接类型和地址或启动方式填写，保存后使用 <strong>Restart</strong> 让设置重新加载，再完成需要的认证。这里可能看到Streamable HTTP或STDIO：前者连接服务地址，后者通常启动本地程序。来历不明的启动命令不要往里填。</p>
+<p>网页ChatGPT与本地Codex的连接是分开管理的。电脑上配置好的服务，网页里还要另外认证。</p>
+<h2 id="plugins-工具能做仍要看这次该不该做">工具能做，仍要看这次该不该做</h2>
+<p>外部服务有自己的账号权限和数据处理规则；通过Codex运行的能力也受到当前任务的权限与组织要求影响。连接成功以后，「可以读取」和「可以替我发布」仍是两回事。</p>
+<p>例如，读出一份文档以后，可以请它起草修改意见；把意见写回原文、改变共享范围或发送给别人，是另一类动作。提出要求时写明要的是草稿还是执行，出现具体批准请求时读清对象与影响。</p>
+<p>服务返回的内容里，也可能夹着别人写的指令。和第11章讲的网页内容一样，它们是当前任务读取的材料，你给定的目标不因此改变。</p>
+<h2 id="plugins-不用了怎样关掉">不用了，怎样关掉</h2>
+<p>临时不用某项能力，可以在对应管理界面检查启用状态，按需要关闭有关技能或连接工具。长期不需要的插件，在Plugins中打开详情，使用可用的 <strong>Uninstall plugin</strong>。组织安装或默认提供的插件可能由管理员管理，没有个人卸载入口。</p>
+<p>卸载插件移除的是该环境中的插件包。另行建立的MCP集成可能仍然连接着，需要到对应连接管理中单独断开；还想撤回外部服务对应用的授权，就到那个服务的授权设置里核对。<a href="https://learn.chatgpt.com/docs/plugins" target="_blank" rel="noopener">卸载与独立连接</a></p>
+<p>已经发出的消息、已经写入外部文档的内容，卸载以后仍在原处。需要撤销某个结果，到对应服务里处理具体对象。</p>
+<p>插件不能使用时，按安装、启用、账号、对象权限和当前任务逐层检查，比反复重装更容易找到原因。</p><nav class="pager"><a class="prev" href="skills.html"><small>← 上一章</small><span>第20章 Skill：把已经跑通的做法保存下来</span></a><a class="next" href="browser.html"><small>下一章 →</small><span>第22章 浏览器：把网页交给Codex查看和操作</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#plugins-插件提供什么">插件提供什么</a></li><li><a href="#plugins-从一个只读需要开始">从一个只读需要开始</a></li><li><a href="#plugins-五种状态逐层分清">五种状态，逐层分清</a></li><li><a href="#plugins-mcp帮助看连接状态">/mcp 帮助看连接状态</a></li><li><a href="#plugins-工具能做仍要看这次该不该做">工具能做，仍要看这次该不该做</a></li><li><a href="#plugins-不用了怎样关掉">不用了，怎样关掉</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>

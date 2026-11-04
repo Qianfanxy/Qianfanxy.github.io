@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第16章 第一版不满意：怎样反馈、核对和改进 · Codex完全零基础入门</title>
+<meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="stylesheet" href="style.css">
+<script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
+
+</head>
+<body data-page="feedback">
+<div class="progress" id="progress"></div>
+<header class="topbar">
+  <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <span class="crumb" id="crumb"></span>
+  <div class="tools">
+  <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+  <button class="icon-btn" id="btn-settings" aria-label="阅读设置" title="阅读设置"><span class="aa">Aa</span></button>
+</div>
+</header>
+<aside class="sidebar" id="sidebar">
+  <a class="side-cover" href="index.html">封面与说明</a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li>
+<li><a href="account-usage.html"><span class="num">第5章</span><span class="name">账号与额度：看懂自己正在用什么</span></a></li>
+<li><a href="models-effort.html"><span class="num">第6章</span><span class="name">模型、Effort和快速模式，应该怎么选</span></a></li>
+<li><a href="permissions.html"><span class="num">第7章</span><span class="name">权限与批准：哪些事需要你决定</span></a></li>
+<li><a href="running-control.html"><span class="num">第8章</span><span class="name">看懂运行过程：补充、排队、停止和继续</span></a></li>
+<li><a href="materials.html"><span class="num">第9章</span><span class="name">把材料交对：文件、图片、链接与应用快照</span></a></li>
+<li><a href="results.html"><span class="num">第10章</span><span class="name">找到、检查、批注和保留成果</span></a></li>
+<li><a href="web-search.html"><span class="num">第11章</span><span class="name">让Codex上网找资料，并检查来源</span></a></li>
+<li><a href="projects-tasks.html"><span class="num">第12章</span><span class="name">管好任务与项目，过几天还能接着做</span></a></li>
+<li><a href="context.html"><span class="num">第13章</span><span class="name">对话变长以后：上下文、压缩和分支</span></a></li>
+<li><a href="clear-requests.html"><span class="num">第14章</span><span class="name">把想法说清楚：让Codex知道你要什么</span></a></li>
+<li><a href="planning.html"><span class="num">第15章</span><span class="name">先商量怎么做：Plan与方案比较</span></a></li>
+<li><a href="feedback.html" class="active" aria-current="page"><span class="num">第16章</span><span class="name">第一版不满意：怎样反馈、核对和改进</span></a></li>
+<li><a href="goals.html"><span class="num">第17章</span><span class="name">用Goal持续推进有明确终点的任务</span></a></li>
+<li><a href="delegation.html"><span class="num">第18章</span><span class="name">几件事怎样分开做：多个任务与子代理</span></a></li>
+<li><a href="personalization.html"><span class="num">第19章</span><span class="name">不想每次重说：偏好、项目说明与记忆</span></a></li>
+<li><a href="skills.html"><span class="num">第20章</span><span class="name">Skill：把已经跑通的做法保存下来</span></a></li>
+<li><a href="plugins.html"><span class="num">第21章</span><span class="name">插件与MCP：接入需要的工具和资料</span></a></li>
+<li><a href="browser.html"><span class="num">第22章</span><span class="name">浏览器：把网页交给Codex查看和操作</span></a></li>
+<li><a href="computer-use.html"><span class="num">第23章</span><span class="name">电脑操作：让Codex操作其他应用</span></a></li>
+<li><a href="scheduled-work.html"><span class="num">第24章</span><span class="name">定时任务：让跑通的工作按时再做</span></a></li>
+<li><a href="quick-reference.html"><span class="num">附录</span><span class="name">命令、设置、排障与术语</span></a></li></ol>
+</aside>
+<div class="scrim" id="scrim"></div>
+<main class="main">
+  <article class="content"><h1 id="feedback">第16章 第一版不满意：怎样反馈、核对和改进</h1>
+<p>第一版出来后，说一句「不太好，再改改」很容易。要让Codex改到点上，得先让它知道你不满意的是哪一类：事实，表达，范围，还是后来才补充的新要求。</p>
+<p>问题的类型清楚了，反馈自然具体，已经做对的部分也保得住，用不着每次把整份成果推倒重来。</p>
+<h2 id="feedback-先确认正在评价哪一版">先确认正在评价哪一版</h2>
+<p>打开实际文件，核对路径和文件名。第15章已经另存了「待办清单-按状态.txt」，而旧窗口可能还显示着v2。两份混在一起，反馈写得再详细也可能指错对象。</p>
+<p>在原任务中继续，并写出当前版本。需要定位时，引用条目名称和有问题的原句，或使用第10章介绍的预览批注。没有定位入口，就用文字描述位置，说到「第几页、第几项、哪一句」就够了。</p>
+<p>提出修改之前，把相关段落读完整。分组或换行之后，原有信息可能只是换了位置。</p>
+<h2 id="feedback-事实错了给它可以回查的依据">事实错了，给它可以回查的依据</h2>
+<p>假设照片数量漏了，可以说：</p>
+<blockquote class="prompt">
+<p>「待办清单-按状态.txt」中发照片这一项漏了数量。「材料/补充说明.txt」写的是选10张。请补回这项要求，其他事实和状态保持不变，保存后再对照两份备忘检查。</p>
+</blockquote>
+<p>文件、错误、依据和范围都在里面。这是遇到该错误时的示例，你的成果没有漏数量，就跳过这一步。</p>
+<p>如果它把「尚未预约」改成了「已预约」，要指出这是事实错误，让它回到原文修正。只说「语气不够准确」，它可能换一个含糊的近义说法了事。</p>
+<p>发现一处问题后，可以要求检查同类问题：一个数量漏了，就核对其他数字是否完整。范围到此为止，一次补数量用不着带出整篇的风格重写。</p>
+<h2 id="feedback-表达不合适说明使用时遇到什么困难">表达不合适，说明使用时遇到什么困难</h2>
+<p>有时内容没有错，只是读起来不方便。说「更简洁」，它可能删掉重要说明；说「更详细」，它可能加上大量背景。把实际的困扰讲出来，更容易得到合适的改动：</p>
+<blockquote class="prompt">
+<p>我每天扫读时不容易一眼找到截止时间。请把每项已有的截止时间单独放一行；日期未定的项也直接写明。内容不删，不新添日期，先改这一处排版。</p>
+</blockquote>
+<p>这条反馈解决的是一个具体的阅读问题。修改后，检查自己是不是能更快找到时间，也检查事实有没有被误改。两者都满足，这次改动才值得保留。</p>
+<p>只说得出感受时，可以先请它提出两种小范围的改法，解释各自解决什么问题，你再选。必要时回到Plan讨论。</p>
+<h2 id="feedback-新进展出现要说明它是新信息">新进展出现，要说明它是新信息</h2>
+<p>「笔记本已经买好了」是你后来提供的进展，原材料里本来就没有。反馈时说明这是新的事实，并指出它替代了哪一项旧状态：</p>
+<blockquote class="prompt">
+<p>补充一个新进展：笔记本已经买好。请只更新这一项状态，另存下一版，其他未完成事项保持原状。</p>
+</blockquote>
+<p>如果把新信息说成「你前面怎么没写」，模型可能回头去找并不存在的依据，甚至给出错误的解释。纠错和更新分开说，版本变化的原因才清楚。</p>
+<p>需求也会变。原来只给自己看，现在要交给别人，就需要补背景或改语气。这属于用途变化，上一版并没有写错。把新用途说出来，才能判断哪些旧选择需要调整。</p>
+<h2 id="feedback-把正确的部分也指出来">把正确的部分也指出来</h2>
+<p>一份成果常常大部分可用，只有局部需要改。反馈里可以写明「保留目前的四项顺序和简短句式，只处理日期说明」，让Codex知道哪些内容已经得到认可。</p>
+<p>修改以后引入了新问题，就指出具体变化，回到已认可的版本比较。连续说「再短一点」「再丰富一点」，中间没有一个当前标准，结果会越来越难评价。</p>
+<p>一次修改达到了本轮要求，先把它保留下来。下一轮要试另一个方向，再另存副本。</p>
+<h2 id="feedback-让它检查但你要看证据">让它检查，但你要看证据</h2>
+<!-- diagram: FIG-032 -->
+<figure><img src="img/FIG-032.webp" alt="先辨清事实错误、表达不便和新进展，再给相应依据或要求。" width="1448" height="1086" loading="lazy"><figcaption>先辨清事实错误、表达不便和新进展，再给相应依据或要求。</figcaption></figure>
+<p><em>图：先辨清事实错误、表达不便和新进展，再给相应依据或要求。</em></p>
+<!-- /diagram: FIG-032 -->
+
+<p>可以要求Codex审阅自己的成果，也可以让另一个模型或另一个任务提意见。这些意见有助于发现问题。几个AI说法一致，依据却仍是同一份材料，算不上多个独立来源。</p>
+<p>事实问题，最终回到原材料或可靠原页；排版问题，看实际显示；保存问题，打开实际文件。</p>
+<p>一条有用的审阅意见，会说明哪里有问题、依据是什么、可能造成什么影响。只得到「整体不错，但还可优化」时，追问一个具体例子。</p>
+<h2 id="feedback-review和feedback各有专门用途"><code>/review</code>和<code>/feedback</code>各有专门用途</h2>
+<p>桌面斜线菜单的 <strong><code>/review</code></strong> 用于代码改动审查，例如检查尚未提交的改动，或与另一条代码基础版本比较。审阅本书这些文本文件用不到它，直接说明对象和标准就可以。</p>
+<p><strong><code>/feedback</code></strong> 则打开向产品提交意见的反馈对话框，可选择附带日志。它是向OpenAI报告应用问题或提产品建议用的；让当前任务改清单，仍然直接发消息。提交之前检查包含的信息，尤其是可选日志的范围。<a href="https://learn.chatgpt.com/docs/reference/slash-commands" target="_blank" rel="noopener">两条命令的官方用途</a></p>
+<p>第一版不满意时，先确定问题来自哪里，再采取对应动作。材料缺了就补材料，要求含混就补要求，局部出错就针对那一处修改。换模型、调高Effort或重开任务，是这些办法都不对症时才考虑的事。</p><nav class="pager"><a class="prev" href="planning.html"><small>← 上一章</small><span>第15章 先商量怎么做：Plan与方案比较</span></a><a class="next" href="goals.html"><small>下一章 →</small><span>第17章 用Goal持续推进有明确终点的任务</span></a></nav><footer class="credit">
+<p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
+<p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
+改动仅限排版：按章拆分页面、重做版式与导航、插图转为 WebP 压缩、改写书内链接、未收录作者头像。正文未作修改。
+本网页版同样以 CC BY-NC-SA 4.0 发布，仅供非商业阅读；内容以原仓库最新版为准。</p>
+</footer></article>
+  <nav class="toc" id="toc"><div class="toc-title">本章内容</div><ul><li><a href="#feedback-先确认正在评价哪一版">先确认正在评价哪一版</a></li><li><a href="#feedback-事实错了给它可以回查的依据">事实错了，给它可以回查的依据</a></li><li><a href="#feedback-表达不合适说明使用时遇到什么困难">表达不合适，说明使用时遇到什么困难</a></li><li><a href="#feedback-新进展出现要说明它是新信息">新进展出现，要说明它是新信息</a></li><li><a href="#feedback-把正确的部分也指出来">把正确的部分也指出来</a></li><li><a href="#feedback-让它检查但你要看证据">让它检查，但你要看证据</a></li><li><a href="#feedback-review和feedback各有专门用途">/review 和 /feedback 各有专门用途</a></li></ul></nav>
+</main>
+<div class="panel" id="settings" hidden>
+  <div class="row"><span>主题</span><div class="seg" data-key="theme"><button data-v="light">浅色</button><button data-v="sepia">护眼</button><button data-v="dark">深色</button><button data-v="">自动</button></div></div>
+  <div class="row"><span>字体</span><div class="seg" data-key="font"><button data-v="">黑体</button><button data-v="serif">宋体</button></div></div>
+  <div class="row"><span>字号</span><div class="seg"><button id="fs-dec">A−</button><span id="fs-val">18</span><button id="fs-inc">A+</button></div></div>
+</div>
+<div class="search" id="search" hidden>
+  <div class="search-box">
+    <input id="search-input" type="search" placeholder="搜索全书，例如：权限、Skill、定时" autocomplete="off">
+    <div id="search-results" class="results"></div>
+  </div>
+</div>
+<div class="lightbox" id="lightbox" hidden><img alt=""></div>
+<script src="app.js"></script>
+</body>
+</html>
