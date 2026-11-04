@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>第1章 Codex能帮你做什么 · Codex完全零基础入门</title>
 <meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
 
 </head>
-<body data-page="intro">
+<body data-page="intro" class="is-chapter">
 <div class="progress" id="progress"></div>
 <header class="topbar">
   <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Codex完全零基础入门</a>
   <span class="crumb" id="crumb"></span>
   <div class="tools">
   <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
@@ -21,16 +24,16 @@
 </div>
 </header>
 <aside class="sidebar" id="sidebar">
-  <a class="side-cover" href="index.html">封面与说明</a>
-  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
-<li><a href="intro.html" class="active" aria-current="page"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
-<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
-<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
-<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li></ol>
+  <a class="side-book" href="index.html"><span class="mini-cover" aria-hidden="true"><b>Codex</b></span><span><strong>Codex完全零基础入门</strong><small>马力 著 · 开篇至第4章</small></span></a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">00</span><span class="name"><small>开篇</small>GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html" class="active" aria-current="page"><span class="num">01</span><span class="name"><small>第1章</small>Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">02</span><span class="name"><small>第2章</small>安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">03</span><span class="name"><small>第3章</small>看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">04</span><span class="name"><small>第4章</small>第一次完整使用：把零散备忘整理成待办清单</span></a></li></ol>
 </aside>
 <div class="scrim" id="scrim"></div>
 <main class="main">
-  <article class="content"><h1 id="intro">第1章 Codex能帮你做什么</h1>
+  <article class="content"><header class="chapter-head"><p class="chapter-label">第1章</p><h1 id="intro">Codex能帮你做什么</h1><p class="chapter-meta"><span>约 7 分钟</span><span>5 个小节</span><span>1 张插图</span></p></header>
 <p>电脑里有几份记录，需要整理成一份说明；一张表里混着不同写法，想把同类项目归到一起；看完几份资料，还想知道它们在哪些地方说得不一样。这些工作说不上难，却要在文件之间来回切换，边读边复制，再检查有没有漏掉什么。</p>
 <p>Codex可以参与这样的工作。你用日常语言说明要求，提供需要的材料，它可以在允许的范围内读取、处理和修改文件，调用工具完成任务。得到第一版以后，你还可以继续指出问题，让它围绕这份成果修改。</p>
 <p>它给普通用户带来的价值，很大一部分就在这里：<strong>把你想做的一件事，推进到实际可用的结果。</strong> 要整理材料，可以让它读材料并保存整理稿；要改一份文件，可以让它找到对应位置，按要求修改，再告诉你改了什么。使用时，你既要会提出要求，也要会检查它实际做到了哪一步。</p>

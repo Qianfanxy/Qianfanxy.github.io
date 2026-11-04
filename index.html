@@ -4,24 +4,219 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Qianfanxy</title>
+<meta name="description" content="Qianfanxy · AI 工具分享 & 教学">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Noto+Serif+SC:wght@500;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#fcfcfa;--fg:#23231f;--soft:#6b6a62;--line:#e4e2db;--accent:#1d6b5f}
-@media (prefers-color-scheme:dark){:root{--bg:#17181a;--fg:#dcdcd6;--soft:#9a9a92;--line:#2e3034;--accent:#6cc4b2}}
-body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.8 -apple-system,"PingFang SC","Microsoft YaHei","Noto Sans SC",sans-serif}
-main{max-width:640px;margin:0 auto;padding:12vh 16px 60px}
-h1{font-size:2.2em;margin:0 0 .2em}p{color:var(--soft)}
-h2{font-size:1em;color:var(--soft);font-weight:600;letter-spacing:.08em;margin:3em 0 .8em}
-a.card{display:block;padding:18px 20px;border:1px solid var(--line);border-radius:14px;color:var(--fg);text-decoration:none}
-a.card:hover{border-color:var(--accent)}a.card b{display:block;font-size:1.1em}a.card span{color:var(--soft);font-size:.9em}
+:root {
+  --bg: #f5f1e8; --paper: #fbf8f1; --ink: #1f1d1a; --soft: #6c665b; --faint: #a39b8c; --line: #e2dbcc;
+  --teal: #1f5e54; --teal-d: #123f38; --hl: #1f5e54; --gold: #c9a35b; --glow: rgba(31,94,84,.10);
+  --display: "Fraunces", "Noto Serif SC", "Songti SC", Georgia, serif;
+  --serif-sc: "Noto Serif SC", "Songti SC", "STSong", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141513; --paper: #1b1c1a; --ink: #ece7dc; --soft: #a8a194; --faint: #6f6a60; --line: #2c2d29;
+    --teal: #2a7a6d; --teal-d: #174a42; --hl: #6cc4b2; --gold: #d8b46c; --glow: rgba(108,196,178,.08); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141513; --paper: #1b1c1a; --ink: #ece7dc; --soft: #a8a194; --faint: #6f6a60; --line: #2c2d29;
+  --teal: #2a7a6d; --teal-d: #174a42; --hl: #6cc4b2; --gold: #d8b46c; --glow: rgba(108,196,178,.08); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html, body { margin: 0; }
+body {
+  background:
+    radial-gradient(1200px 600px at 85% -10%, var(--glow), transparent 60%),
+    radial-gradient(900px 500px at -10% 110%, var(--glow), transparent 60%),
+    var(--bg);
+  color: var(--ink); font: 16px/1.75 var(--sans); min-height: 100vh;
+  display: flex; flex-direction: column;
+}
+a { color: inherit; }
+.wrap { width: 100%; max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+/* 顶栏 */
+.nav { display: flex; align-items: center; justify-content: space-between; padding: 26px 0; }
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; font-family: var(--display); font-weight: 600; font-size: 20px; letter-spacing: -.01em; }
+.logo-mark { width: 30px; height: 30px; border-radius: 9px; background: var(--teal); color: #f3ecdc; display: grid; place-items: center; font-size: 15px; font-family: var(--serif-sc); }
+.nav-links { display: flex; gap: 6px; }
+.nav-links a { text-decoration: none; color: var(--soft); font-size: 14.5px; padding: 6px 12px; border-radius: 999px; }
+.nav-links a:hover { color: var(--ink); background: var(--paper); }
+
+/* 首屏 */
+.hero { padding: 6vh 0 5vh; max-width: 760px; }
+.kicker { font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: var(--teal); font-weight: 600; margin: 0 0 22px; }
+.hero h1 { font-family: var(--display); font-weight: 400; font-size: clamp(40px, 6.4vw, 72px); line-height: 1.14; letter-spacing: -.03em; margin: 0; }
+.hero h1 em { font-style: normal; color: var(--hl); }
+.hero p { font-size: 18px; color: var(--soft); margin: 26px 0 0; max-width: 34em; }
+
+/* 书架 */
+.section-head { display: flex; align-items: baseline; justify-content: space-between; border-top: 1px solid var(--line); padding-top: 22px; margin-bottom: 34px; }
+.section-head h2 { font-family: var(--serif-sc); font-weight: 700; font-size: 22px; margin: 0; letter-spacing: .04em; }
+.section-head span { color: var(--faint); font-size: 13.5px; }
+
+.feature { display: grid; grid-template-columns: 300px 1fr; gap: 64px; align-items: center; padding: 8px 0 40px; }
+.shelf { position: relative; display: grid; place-items: center; padding: 26px 0 34px; }
+.shelf::after { content: ""; position: absolute; left: 6%; right: 6%; bottom: 14px; height: 14px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0,0,0,.28), transparent); filter: blur(4px); }
+
+/* 画出来的书 */
+.book { position: relative; z-index: 1; width: 228px; aspect-ratio: 3 / 4.25; display: block; text-decoration: none;
+  border-radius: 3px 12px 12px 3px; color: #f4ecda;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.28) 0, rgba(0,0,0,.05) 5%, rgba(255,255,255,.08) 6.5%, transparent 9%),
+    radial-gradient(120% 80% at 80% 0%, rgba(255,255,255,.14), transparent 55%),
+    linear-gradient(160deg, var(--teal), var(--teal-d));
+  box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 30px 50px -20px rgba(18,63,56,.55), 0 10px 20px -10px rgba(0,0,0,.35);
+  transform: perspective(1200px) rotateY(-14deg) rotateX(2deg); transform-origin: left center;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1), box-shadow .5s; }
+.book:hover { transform: perspective(1200px) rotateY(-4deg) translateY(-6px); box-shadow: 0 1px 0 rgba(255,255,255,.15) inset, 0 40px 60px -20px rgba(18,63,56,.6), 0 14px 24px -10px rgba(0,0,0,.35); }
+.book::after { content: ""; position: absolute; top: 4px; bottom: 4px; right: -7px; width: 8px; border-radius: 0 3px 3px 0;
+  background: repeating-linear-gradient(180deg, #efe8d6 0 2px, #d9d0bb 2px 3px); transform: skewY(-.5deg); }
+.book-inner { position: absolute; inset: 0; padding: 26px 22px 22px 32px; display: flex; flex-direction: column; }
+.book-frame { position: absolute; inset: 12px 12px 12px 22px; border: 1px solid rgba(201,163,91,.55); border-radius: 2px 6px 6px 2px; pointer-events: none; }
+.book-en { font-family: var(--display); font-size: 12px; letter-spacing: .3em; color: var(--gold); }
+.book-title { font-family: var(--serif-sc); font-weight: 700; font-size: 27px; line-height: 1.32; margin-top: 16px; letter-spacing: .04em; }
+.book-rule { width: 34px; height: 2px; background: var(--gold); margin: 18px 0 0; }
+.book-glyph { margin-top: auto; font-family: var(--display); font-size: 54px; line-height: 1; color: rgba(244,236,218,.16); font-style: italic; }
+.book-author { font-family: var(--serif-sc); font-size: 14px; letter-spacing: .3em; opacity: .9; margin-top: 8px; }
+
+.info .tag { display: inline-flex; gap: 8px; align-items: center; font-size: 12.5px; color: var(--teal); background: var(--paper); border: 1px solid var(--line); padding: 3px 11px; border-radius: 999px; }
+.info .tag i { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); }
+.info h3 { font-family: var(--serif-sc); font-size: clamp(28px, 4vw, 38px); line-height: 1.3; margin: 16px 0 6px; letter-spacing: .02em; }
+.info .by { color: var(--soft); margin: 0 0 18px; }
+.info .desc { color: var(--soft); font-size: 16.5px; max-width: 34em; margin: 0 0 26px; }
+.chap { list-style: none; margin: 0 0 30px; padding: 0; border-top: 1px solid var(--line); max-width: 560px; }
+.chap a { display: grid; grid-template-columns: 64px 1fr auto; gap: 12px; align-items: baseline; padding: 11px 4px; border-bottom: 1px solid var(--line); text-decoration: none; transition: padding .2s, color .2s; }
+.chap a:hover { padding-left: 10px; color: var(--teal); }
+.chap .n { font-family: var(--display); color: var(--faint); font-size: 14px; }
+.chap .arrow { color: var(--faint); font-size: 14px; opacity: 0; transition: opacity .2s; }
+.chap a:hover .arrow { opacity: 1; color: var(--teal); }
+.btns { display: flex; gap: 12px; flex-wrap: wrap; }
+.btn { display: inline-flex; align-items: center; gap: 8px; padding: 11px 24px; border-radius: 999px; text-decoration: none; font-size: 15.5px; border: 1px solid var(--line); background: var(--paper); transition: transform .2s, border-color .2s; }
+.btn:hover { transform: translateY(-1px); border-color: var(--teal); }
+.btn.primary { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.course { margin-bottom: 64px; }
+.lessons { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; }
+.lesson { display: grid; grid-template-columns: auto 1fr auto; gap: 18px; align-items: center; padding: 22px 22px; text-decoration: none;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 18px; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.lesson:hover { transform: translateY(-2px); border-color: var(--teal); box-shadow: 0 14px 30px -18px rgba(18,63,56,.45); }
+.lesson-n { width: 52px; height: 52px; border-radius: 14px; display: grid; place-items: center; font-family: var(--display); font-size: 26px;
+  color: #f3ecdc; background: linear-gradient(160deg, var(--teal), var(--teal-d)); box-shadow: inset 0 0 0 1px rgba(201,163,91,.45); }
+.lesson-body { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.lesson-body small { color: var(--hl); font-size: 12.5px; letter-spacing: .08em; font-weight: 600; }
+.lesson-body strong { font-family: var(--serif-sc); font-size: 20px; line-height: 1.4; }
+.lesson-body span { color: var(--soft); font-size: 14px; line-height: 1.6; }
+.lesson-go { color: var(--faint); font-size: 18px; transition: transform .2s, color .2s; }
+.lesson:hover .lesson-go { transform: translateX(4px); color: var(--hl); }
+@media (max-width: 480px) { .lessons { grid-template-columns: 1fr; } .lesson { padding: 18px 16px; gap: 14px; } .lesson-go { display: none; } }
+footer { margin-top: auto; padding: 40px 0 34px; color: var(--faint); font-size: 13px; }
+footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; border-top: 1px solid var(--line); padding-top: 22px; }
+footer a { color: var(--soft); }
+
+@media (max-width: 820px) {
+  .feature { grid-template-columns: 1fr; gap: 28px; }
+  .hero { padding: 6vh 0 5vh; }
+  .book { width: 190px; }
+  .book-title { font-size: 23px; }
+}
+@media (max-width: 480px) {
+  .wrap { padding: 0 16px; }
+  .nav { padding: 18px 0; }
+  .chap a { grid-template-columns: 52px 1fr; }
+  .chap .arrow { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .book, .btn, .chap a { transition: none; } }
 </style>
 </head>
-<body><main>
-<h1>Qianfanxy</h1>
-<p>ai工具分享&amp;教学</p>
-<h2>课程资料</h2>
-<a class="card" href="course/resource-help.html"><b>0-资源帮助</b><span>开始前必读 · 资源访问帮助</span></a>
-<a class="card" style="margin-top:12px" href="course/quick-download.html"><b>1-快速下载</b><span>安装应用、登录并进入 Codex · 附 Markdown 下载</span></a>
-<h2>书架</h2>
-<a class="card" href="codex-guide/"><b>Codex完全零基础入门</b><span>马力 著 · 网页阅读版 · CC BY-NC-SA 4.0</span></a>
-</main></body>
+<body>
+<div class="wrap">
+  <nav class="nav">
+    <a class="logo" href="./"><span class="logo-mark">帆</span>Qianfanxy</a>
+    <div class="nav-links">
+      <a href="#course">课程</a>
+      <a href="#shelf">书架</a>
+      <a href="https://github.com/Qianfanxy" target="_blank" rel="noopener">GitHub</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <p class="kicker">AI Tools · Sharing &amp; Teaching</p>
+    <h1>AI 工具<br><em>分享</em>与<em>教学</em></h1>
+    <p>ai工具分享&amp;教学。课程资料按顺序整理在下面，配套阅读放在书架上。</p>
+  </header>
+
+  <section id="course" class="course">
+    <div class="section-head"><h2>课程资料</h2><span>按顺序学习</span></div>
+    <div class="lessons">
+      <a class="lesson" href="course/resource-help.html">
+        <span class="lesson-n">0</span>
+        <span class="lesson-body"><small>开始前必读</small><strong>资源帮助</strong><span>资源访问帮助：页面打不开、视频无法加载时先看这里。</span></span>
+        <span class="lesson-go">→</span>
+      </a>
+      <a class="lesson" href="course/quick-download.html">
+        <span class="lesson-n">1</span>
+        <span class="lesson-body"><small>第一步</small><strong>快速下载</strong><span>安装应用、登录并进入 Codex · 附 Markdown 下载。</span></span>
+        <span class="lesson-go">→</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="shelf">
+    <div class="section-head"><h2>书架</h2><span>1 本</span></div>
+    <div class="feature">
+      <div class="shelf">
+        <a class="book" href="codex-guide/" aria-label="打开《Codex完全零基础入门》">
+          <span class="book-frame"></span>
+          <span class="book-inner">
+            <span class="book-en">CODEX</span>
+            <span class="book-title">Codex<br>完全零基础<br>入门</span>
+            <span class="book-rule"></span>
+            <span class="book-glyph">C</span>
+            <span class="book-author">马力 著</span>
+          </span>
+        </a>
+      </div>
+      <div class="info">
+        <span class="tag"><i></i>网页阅读版 · 开篇至第4章</span>
+        <h3>Codex完全零基础入门</h3>
+        <p class="by">马力 著</p>
+        <p class="desc">写给没有编程经验的人。从认识 Codex、安装应用、看懂第一屏，到第一次完整地把零散备忘整理成待办清单。</p>
+        <ol class="chap">
+          <li><a href="codex-guide/latest-models.html"><span class="n">开篇</span><span>GPT-6 Astra与现在的Codex</span><span class="arrow">→</span></a></li>
+          <li><a href="codex-guide/intro.html"><span class="n">第1章</span><span>Codex能帮你做什么</span><span class="arrow">→</span></a></li>
+          <li><a href="codex-guide/desktop-setup.html"><span class="n">第2章</span><span>安装应用，进入Codex</span><span class="arrow">→</span></a></li>
+          <li><a href="codex-guide/workspace-files.html"><span class="n">第3章</span><span>看懂第一屏，并发出第一条消息</span><span class="arrow">→</span></a></li>
+          <li><a href="codex-guide/first-task.html"><span class="n">第4章</span><span>第一次完整使用：把零散备忘整理成待办清单</span><span class="arrow">→</span></a></li>
+        </ol>
+        <div class="btns">
+          <a class="btn primary" href="codex-guide/latest-models.html">开始阅读</a>
+          <a class="btn" id="resume" hidden href="#">继续阅读</a>
+          <a class="btn" href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">原书仓库 ↗</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <div class="wrap"><div class="row">
+    <span>© 2026 Qianfanxy · ai工具分享&amp;教学</span>
+    <span>书籍内容版权归原作者，按 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 非商业转载</span>
+  </div></div>
+</footer>
+<script>
+try {
+  var last = localStorage.getItem("cg-last"), r = document.getElementById("resume");
+  if (last && r) { r.href = "codex-guide/" + last + ".html"; r.textContent = "继续阅读：" + (localStorage.getItem("cg-last-title") || ""); r.hidden = false; }
+} catch (e) {}
+</script>
+</body>
 </html>

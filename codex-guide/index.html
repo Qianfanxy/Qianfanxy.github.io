@@ -5,15 +5,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Codex完全零基础入门</title>
 <meta name="description" content="马力《Codex完全零基础入门》网页阅读版">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&display=swap">
 <link rel="stylesheet" href="style.css">
 <script>try{var t=localStorage.getItem("cg-theme");if(t)document.documentElement.dataset.theme=t;var f=localStorage.getItem("cg-font");if(f)document.documentElement.dataset.font=f;var s=localStorage.getItem("cg-size");if(s)document.documentElement.style.setProperty("--fs",s+"px")}catch(e){}</script>
 
 </head>
-<body data-page="cover">
+<body data-page="cover" class="is-cover">
 <div class="progress" id="progress"></div>
 <header class="topbar">
   <button class="icon-btn" id="btn-menu" aria-label="目录"><svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-  <a class="brand" href="index.html">Codex完全零基础入门</a>
+  <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span>Codex完全零基础入门</a>
   <span class="crumb" id="crumb"></span>
   <div class="tools">
   <button class="icon-btn" id="btn-search" aria-label="搜索" title="搜索 (/)"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
@@ -21,26 +24,39 @@
 </div>
 </header>
 <aside class="sidebar" id="sidebar">
-  <a class="side-cover" href="index.html">封面与说明</a>
-  <ol class="chapters"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li>
-<li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li>
-<li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li>
-<li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li>
-<li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li></ol>
+  <a class="side-book" href="index.html"><span class="mini-cover" aria-hidden="true"><b>Codex</b></span><span><strong>Codex完全零基础入门</strong><small>马力 著 · 开篇至第4章</small></span></a>
+  <ol class="chapters"><li><a href="latest-models.html"><span class="num">00</span><span class="name"><small>开篇</small>GPT-6 Astra与现在的Codex</span></a></li>
+<li><a href="intro.html"><span class="num">01</span><span class="name"><small>第1章</small>Codex能帮你做什么</span></a></li>
+<li><a href="desktop-setup.html"><span class="num">02</span><span class="name"><small>第2章</small>安装应用，进入Codex</span></a></li>
+<li><a href="workspace-files.html"><span class="num">03</span><span class="name"><small>第3章</small>看懂第一屏，并发出第一条消息</span></a></li>
+<li><a href="first-task.html"><span class="num">04</span><span class="name"><small>第4章</small>第一次完整使用：把零散备忘整理成待办清单</span></a></li></ol>
 </aside>
 <div class="scrim" id="scrim"></div>
 <main class="main">
-  <article class="content"><div class="cover">
-  <p class="eyebrow">网页阅读版</p>
-  <h1 class="cover-title">Codex完全零基础入门</h1>
-  <p class="author">马力 著</p>
-  <p class="lead">写给没有编程经验的人：从安装应用、发出第一条消息，到权限、Plan、Goal、Skill、插件和定时任务，一步步学会用 Codex 把一件事真正做完。</p>
-  <p class="lead">本站收录开篇与第1–4章：从认识 Codex、安装应用，到完成第一件完整任务。后续章节请到<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">原仓库</a>阅读。</p>
-  <div class="cta"><a class="btn primary" href="latest-models.html">开始阅读</a><a class="btn" id="resume" hidden href="#">继续阅读</a></div>
-</div>
-<h2 id="contents">目录</h2>
-<ol class="cover-toc"><li><a href="latest-models.html"><span class="num">开篇</span><span class="name">GPT-6 Astra与现在的Codex</span></a></li><li><a href="intro.html"><span class="num">第1章</span><span class="name">Codex能帮你做什么</span></a></li><li><a href="desktop-setup.html"><span class="num">第2章</span><span class="name">安装应用，进入Codex</span></a></li><li><a href="workspace-files.html"><span class="num">第3章</span><span class="name">看懂第一屏，并发出第一条消息</span></a></li><li><a href="first-task.html"><span class="num">第4章</span><span class="name">第一次完整使用：把零散备忘整理成待办清单</span></a></li></ol>
-<p class="hint">阅读小提示：按 <kbd>/</kbd> 搜索全书，按 <kbd>←</kbd> <kbd>→</kbd> 翻章，右上角 <b>Aa</b> 可以调主题、字体和字号。</p><footer class="credit">
+  <article class="content"><section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">网页阅读版 · 开篇至第4章</p>
+    <h1 class="cover-title">Codex<br>完全零基础入门</h1>
+    <p class="author">马力 著</p>
+    <p class="lead">写给没有编程经验的人。从认识 Codex、安装应用、看懂第一屏，到亲手完成第一件完整的任务。</p>
+    <div class="cta"><a class="btn primary" href="latest-models.html">开始阅读 →</a><a class="btn" id="resume" hidden href="#">继续阅读</a></div>
+    <p class="stats"><span><b>5</b> 个章节</span><span><b>11</b> 张插图</span><span>约 <b>51</b> 分钟读完</span></p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <div class="book"><div class="book-spine"></div><div class="book-front">
+      <span class="book-tag">零基础入门</span>
+      <span class="book-title">Codex<br>完全零基础<br>入门</span>
+      <span class="book-lines"><i></i><i></i><i></i></span>
+      <span class="book-author">马力</span>
+    </div></div>
+  </div>
+</section>
+<section class="contents">
+  <h2 id="contents">目录</h2>
+  <ol class="toc-rows"><li><a href="latest-models.html"><span class="row-num">00</span><span class="row-body"><small>开篇 · 约 10 分钟</small><strong>GPT-6 Astra与现在的Codex</strong><span class="row-desc">你手里有几份资料，想把它们整理成一份能用的说明。费时间的常常是打字以外的事：要看懂几份材料说的是不是同一件事，找到互相矛盾的地方，决定怎…</span></span><span class="row-arrow">→</span></a></li><li><a href="intro.html"><span class="row-num">01</span><span class="row-body"><small>第1章 · 约 7 分钟</small><strong>Codex能帮你做什么</strong><span class="row-desc">电脑里有几份记录，需要整理成一份说明；一张表里混着不同写法，想把同类项目归到一起；看完几份资料，还想知道它们在哪些地方说得不一样。这些工…</span></span><span class="row-arrow">→</span></a></li><li><a href="desktop-setup.html"><span class="row-num">02</span><span class="row-body"><small>第2章 · 约 8 分钟</small><strong>安装应用，进入Codex</strong><span class="row-desc">这一章把应用准备好：选对下载入口，完成安装和登录，进入Codex。Windows和Mac的安装条件分别说明；登录以后，两种电脑可以沿着同…</span></span><span class="row-arrow">→</span></a></li><li><a href="workspace-files.html"><span class="row-num">03</span><span class="row-body"><small>第3章 · 约 14 分钟</small><strong>看懂第一屏，并发出第一条消息</strong><span class="row-desc">进入Codex后，先认三个地方：侧栏用来找到工作，输入框用来提出要求，消息区域用来看处理过程和回复。本章先把工作文件夹打开，发一条短消息…</span></span><span class="row-arrow">→</span></a></li><li><a href="first-task.html"><span class="row-num">04</span><span class="row-body"><small>第4章 · 约 12 分钟</small><strong>第一次完整使用：把零散备忘整理成待办清单</strong><span class="row-desc">上一章，我们让Codex在回复里整理了几行提醒。这一次，材料已经存在电脑文件里，我们要让它找到材料、整理内容、保存清单，再根据新的进展修…</span></span><span class="row-arrow">→</span></a></li></ol>
+  <p class="more">第5章起的内容（账号与额度、权限、Plan、Goal、Skill、插件、定时任务等）请到<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">原仓库</a>继续阅读。</p>
+  <p class="hint">小提示：按 <kbd>/</kbd> 搜索，按 <kbd>←</kbd> <kbd>→</kbd> 翻章，右上角 <b>Aa</b> 调主题、字体与字号。</p>
+</section><footer class="credit">
 <p>原作：马力《<a href="https://github.com/mali9527/codex-full-guide-for-beginners" target="_blank" rel="noopener">Codex完全零基础入门</a>》，采用
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans" target="_blank" rel="noopener">CC BY-NC-SA 4.0</a> 许可。</p>
 <p>本网页版据原仓库 <a href="https://github.com/mali9527/codex-full-guide-for-beginners/blob/f0393647dd6d2414b27e6bff191b849745b6f5b3/%E5%85%A8%E4%B9%A6.md" target="_blank" rel="noopener"><code>全书.md</code>（f039364）</a>改编，
