@@ -7220,7 +7220,7 @@ async function musicPreferences(choices) {
     );
   function theatre(kind, pieces, floor = "") {
     const print =
-      '<div class="floor-print"><span class="floor-sprig">✳</span><p>For your every little wonder.</p><small>PAPER & WISHES · BIRTHDAY EDITION</small><span class="floor-sprig">✧</span></div>';
+      '<div class="floor-print"><p>For your every little wonder.</p><small>PAPER & WISHES · BIRTHDAY EDITION</small><span class="floor-sprig">✧</span></div>';
     return `<div class="popup-theatre ${kind}-theatre"><div class="popup-floor" aria-hidden="true">${floor}<span class="floor-crease"></span>${print}</div><div class="popup-floor popup-floor-back" aria-hidden="true"></div>${pieces}</div>`;
   }
   const cutoutBack = (art) => `<div class="cutout-back">${art}</div>`;
